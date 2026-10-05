@@ -1,0 +1,75 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+.footer{
+    margin-top: 20px;
+    background:#fff;
+    border-top:1px solid #e5e5e5;
+    padding:50px 60px;
+    box-sizing: border-box;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns: 2.5fr 1.5fr 1.5fr 1.2fr 1.2fr;
+    gap:40px;
+}
+.logo{
+    width: 70%;
+    height: 75px;
+}
+.logo img{
+    width: 100%;
+    height: 75px;
+}
+
+
+.footer-about p{
+    color:#555;
+    font-size:14px;
+    line-height:1.6;
+    margin:15px 0;
+}
+
+.footer-about h4{
+    margin:20px 0 10px;
+    font-size:15px;
+}
+
+.payments{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.payments span{
+    border:1px solid #ddd;
+    padding:6px 10px;
+    font-size:12px;
+    border-radius:4px;
+    background:#f9f9f9;
+}
+
+.footer-links h4{
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.footer-links ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-links ul li{
+    font-size:14px;
+    color:#555;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.footer-links ul li:hover{
+    color:#1a7f37;
+}

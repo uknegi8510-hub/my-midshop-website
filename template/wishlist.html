@@ -1,0 +1,327 @@
+{% load static %}
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .section_one{
+        padding: 30px 0px 30px 0px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: rgb(247, 244, 244);
+    }
+    .wishlist-section{
+        padding: 10px 0px 10px 0px;
+        box-sizing: border-box;
+        width: 70%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .wishlist-header{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .wishlist-header h3{
+        margin-left: 40px;
+    }
+    .header-line{
+        border-top: 1px solid rgb(206, 203, 203);
+        border-bottom: 1px solid rgb(206, 203, 203);
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-image{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header-name{
+        width: 35%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+    }
+    .header-price{
+        width: 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header-line p{
+        font: bold;
+        font-weight: 600;
+    }
+    .header-stock{
+        width: 11%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        
+    }
+    .header-action{
+        width: 11%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header-remove{
+        width: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .about{
+        width: 100%;
+        height: 120px;
+        border-bottom: 2px solid rgb(206, 203, 203);
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .about-image{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .image-box{
+        width: 90%;
+        height: 80px;
+        overflow: hidden;
+    }
+    .image-box img{
+        width: 100%;
+        height: 80px;
+    }
+    .product-name{
+        width: 35%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+    }
+    .product-name a{
+        text-decoration: none;
+        display: block;
+        color: black;
+    }
+    .product-price{
+        width: 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .product-stock{
+        width: 11%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .product-action{
+        width: 11%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .product-remove{
+        width: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .add_cart{
+        width: 90px;
+        border:1px solid var(--primary-color);
+        height: 40px;
+        border-radius: 15px;
+        font-size: 12px;
+        font-weight:6 00;
+        text-align: center;
+        color:var(--primary-color);
+    }
+    .add_cart:hover{
+        background-color: var(--secondary-color);
+        color: white;
+    }
+    .add-link{
+        text-decoration: none;
+        display: block;
+        color: none;
+    }
+
+</style>
+<body>
+    <div class="section_one">
+        <div class="wishlist-section">
+            <div class="wishlist-header">
+                <h3>MY Wishlist ()</h3>
+            </div>
+            <div class="header-line">
+                    <div class="header-image" ><p></p></div>
+                    <div class="header-name"><p>Product Name</p></div>
+                    <div class="header-price"><p>Price</p></div>
+                    <div class="header-stock"><p>Stock Status</p></div>
+                    <div class="header-action"><p>Actions</p></div>
+                    <div class="header-remove"><p>remove</p></div>
+            </div>
+            {% for data in wishlist_items %}
+            <div class="about" id="wishlist-{{ data.product.id }}">
+                <div class="about-image">
+                    <div class="image-box">
+                        {% with first_image=data.product.images.first %}
+                        {% if first_image %}
+                        <img src="{{ first_image.image.url }}" alt="">
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+                <div class="product-name">
+                    <a href="{% url 'product_page' data.product.slug %}">
+                        <p>{{data.product.name}}</p>
+                    </a>
+                </div>
+                <div class="product-price"><p>₹{{data.product.price}}</p></div>
+                <div class="product-stock"><p>In Stock</p></div>
+                <div class="product-action">
+                    <a href="" class="add-link">
+                        <button class="add_cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart({{ data.product.id }})">Add to cart</button>
+                    </a>
+                </div>
+                <div class="product-remove">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 100 100" width="30" height="30" stroke="#858484" onclick="removeWishlist({{data.product.id}})">
+                      <path d="M20 25h60l-7 60H27zM15 25h70M35 18h30v7H35z"
+                            fill="none" stroke="#858484" stroke-width="6"
+                            stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M38 38l3 35M50 38v35M62 38l-3 35"
+                            stroke="#858484" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+<script>
+
+function getCookie(name) {
+    let cookieValue = null;
+
+    if (document.cookie && document.cookie !== '') {
+
+        const cookies = document.cookie.split(';');
+
+        for (let cookie of cookies) {
+
+            cookie = cookie.trim();
+
+            if (cookie.startsWith(name + '=')) {
+
+                cookieValue = decodeURIComponent(
+                    cookie.substring(name.length + 1)
+                );
+
+                break;
+            }
+        }
+    }
+
+    return cookieValue;
+}
+
+function addToCart(productId) {
+    
+    fetch('/add-cart/', {
+        method: "POST",
+
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        
+        body: JSON.stringify({
+            product_id: productId,
+            quantity: 1
+        })
+    })
+
+    .then(response => response.json())
+    
+    .then(data => {
+        
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+        
+        alert(data.message);
+        console.log(data);
+        
+    })
+    
+    
+    
+}
+
+function removeWishlist(productId){
+    
+    console.log(productId)
+    fetch('/add-wishlist/remove/',{
+        method:"DELETE",
+        headers:{
+            'Content-Type':"application/json",
+            'X-CSRFToken':getCookie('csrftoken')
+        },
+        body:JSON.stringify({
+            product_id:productId,
+        })
+    })
+    .then(response=>response.json())
+    .then(data=>{
+        if(data.error){
+            alert(data.error);
+            return;
+        }
+        // alert(data.message);
+        // console.log(data);
+        location.reload();
+    })
+    .catch(error=>{
+        console.error("Error",error);
+        alert("Something went wrong");
+    });
+
+}
+
+
+
+</script>

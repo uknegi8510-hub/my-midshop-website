@@ -1,0 +1,393 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopcart</title>
+    <link rel="icon" type="image"href="{% static 'image/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'js/index.js' %}">
+</head>
+<style>
+
+</style>
+<body>
+    <div class="first-section">
+        <img id="bannerImage" src="{% static 'image/template-one.png' %}" alt="">
+        <button class="prev" onclick="prevImage()"><</button>
+        <button class="next" onclick="nextImage()">></button>
+
+        <div class="dots">
+            <span class="dot active" onclick="goToImage(0)"></span>
+            <span class="dot" onclick="goToImage(1)"></span>
+            <span class="dot" onclick="goToImage(2)"></span>
+        </div>
+    </div>
+<div class="second_section">
+    <div class="category_container">
+        <h3>Shop Our Top Category</h3>
+        <div class="category_box">
+            {% for data in category %}
+            <div class="category" >
+                <a href="{% url 'product_listing' data.slug %}" ">
+                    <img src="/media/{{data.image}}" alt="">
+                     <p class="category-name">{{data.name}}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="third_section">
+    <h2 class="title">Today's Best Deals For You!</h2>
+    <div class="display_item">
+        <div class="display-scroll" id="productScroll">
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="scroll-track-holder">
+        <div class="scroll-track">
+            <div class="scroll-fill" id="scroll-fill"></div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="fourth_section">
+    <h3>Choose your Brand</h3>
+    <div class="brand_sections">
+        <div class="brand_container">
+            {% for i in brand %}
+            <a href="{% url 'brand_product_listing' i.slug %}" class="brand_link">
+            <div class="brands">
+                <div class="brands_logo">
+                    <img src="/media/{{i.logo}}" alt="">
+                </div>
+                <div class="brand_name">
+                    <h5 style="margin: 0px;">{{i.name}}</h5>
+                    <!-- <p style="margin: 0px;">Mumbay indian brands</p> -->
+                </div>
+            </div>
+            </a>
+            {% endfor %}
+               
+        </div>
+        
+    </div>
+</div>
+<div class="fifth_section">
+    <h3>Best Product for You</h3>
+    <div class="product_section">
+        <div class="product_container">
+            {% for i in product_data %}
+            <a href="{% url 'product_page' i.slug %}" class="remove-color">
+            <div class="product">
+                <div class="product_img">
+                    <img src="/media/{{i.img}}" alt="">
+                </div>
+                <!-- <div class="wishlist"> -->
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg"  onclick="event.preventDefault(); event.stopPropagation(); AddToWishlist({{ i.id }})">
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                <!-- </div> -->
+                <div class="product_details">
+                    <div class="flex_content">
+                        <h5 style="margin-left:2%;margin-top: 2%;">{{i.name}}</h5>
+                        <h5 style="margin-right:2%;margin-top: 2%;">{{i.price}}</h5>
+                    </div>
+                    <p>Table with air purifier,stainer venner/backc</p>
+                    <p>⭐⭐⭐⭐⭐(121)</p>
+                    <button class="add_cart">Add to cart</button>
+                </div>
+            </div>
+            </a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+{% include 'footer.html' %}
+</html>
+<script>
+    const container = document.getElementById("productScroll");
+const fill = document.getElementById("scroll-fill");
+
+function updateProgress() {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    if (maxScroll <= 0) {
+        fill.style.width = "100%";
+        return;
+    }
+
+    const percent = (container.scrollLeft / maxScroll) * 100;
+    fill.style.width = percent + "%";
+}
+
+container.addEventListener("scroll", updateProgress);
+window.addEventListener("load", updateProgress);
+
+// heart section
+document.querySelectorAll('.heart').forEach(heart => {
+    heart.addEventListener('click', function () {
+      this.classList.toggle('active');
+    });
+  });
+  
+const images = [
+    "{% static 'image/template-one.png' %}",
+    "{% static 'image/template-two.png' %}",
+    "{% static 'image/template-three.png' %}"
+];
+
+let currentImage = 0;
+
+const bannerImage = document.getElementById("bannerImage");
+const dots = document.querySelectorAll(".dot");
+
+function showImage() {
+    bannerImage.src = images[currentImage];
+    // Change active dot
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    dots[currentImage].classList.add("active");
+}
+
+function nextImage() {
+    currentImage++;
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    showImage();
+}
+
+function prevImage() {
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    showImage();
+}
+function goToImage(index) {
+
+    currentImage = index;
+
+    showImage();
+}
+
+
+/* Automatically change image every 3 seconds */
+setInterval(nextImage, 4000);
+
+
+
+function getCookie(name) {
+    let cookieValue = null;
+
+    if (document.cookie && document.cookie !== '') {
+
+        const cookies = document.cookie.split(';');
+
+        for (let cookie of cookies) {
+
+            cookie = cookie.trim();
+
+            if (cookie.startsWith(name + '=')) {
+
+                cookieValue = decodeURIComponent(
+                    cookie.substring(name.length + 1)
+                );
+
+                break;
+            }
+        }
+    }
+
+    return cookieValue;
+}
+
+
+function AddToWishlist(productId){
+    fetch('add-wishlist/',{
+        method:'POST',
+        headers:{
+            'content-type':'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body:JSON.stringify({
+            product_id:productId,
+            quantity:1
+        })
+    })
+    .then(response=>response.json())
+    .then(data=>{
+        if(data.error){
+            alert(data.error);
+            return;
+        }
+        alert(data.message);
+        console.log(data)
+    })
+    .catch(error=>{
+        console.log("error",error)
+        alert("something wentt wrong")
+    })
+}
+
+
+
+</script>

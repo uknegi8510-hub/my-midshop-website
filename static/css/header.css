@@ -1,0 +1,404 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* font-style:; */
+}
+:root{
+    --primary-color:#1A2421 ;
+    --secondary-color:rgb(31, 74, 31);
+    --third-color:rgb(33, 123, 33);
+    --light-color:rgb(46, 135, 46);
+}
+
+body{
+    padding-top: 110px;
+    box-sizing: border-box;
+}
+.header-container{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top:0px;
+
+}
+.top_box{
+    width: 100%;
+    height: 40px;
+    background-color: #1A2421;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.options select{
+    color: white;
+    background-color: #1A2421;
+    border: none
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    gap: 5%;
+    align-items: center;
+}
+.header_box{
+    width: 100%;
+    height: 70px;
+    border: 1px solid black;
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+    background-color: white;
+}
+.header-logo{
+    width:35%;
+    height:50px;
+    overflow: hidden;
+}
+.header-logo img{
+    width: 100%;
+    height: 50px;
+}
+.left_box{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.nav_bar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav_bar a{
+    color: black;
+    text-decoration: none;
+
+}
+.nav_bar select{
+    border:none;
+}
+.nav_bar select:focus{
+    outline: none;
+    border-color: transparent;
+    box-shadow: none; 
+    border-color: #ccc;
+}
+
+.right_box{
+    width: 25%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.right_box a{
+    text-decoration: none;
+}
+.middel_box{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.search-box{
+    border: 1px solid gray;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+}
+
+.search-box input::placeholder{
+    color: #838080;
+}
+
+.search-icon{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border:none;
+    font-size: 30px;
+    color: #666;
+    /* cursor: pointer; */
+}
+.search-icon:hover{
+    background-color: white;
+}
+
+.Account{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+.account-wrapper{
+    display:inline-block;
+    position: relative;
+
+}
+.dropdown{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border: 1px solid rgb(197, 194, 194);
+    border-radius: 10px;
+    position: absolute;
+    right: -50px;
+    top:35px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0,0.1);
+    visibility: hidden;
+    transition: 0.2s ease; 
+}
+.profile-section p {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.profile-section p:hover {
+    background-color: #f2f2f2;
+}
+
+/* 🔥 THIS IS IMPORTANT */
+.account-wrapper:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-box{
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(192, 187, 187);
+}
+.user-guied{
+    font-size:10px;
+    font-weight: 300;
+    color: rgb(60, 59, 59);
+    margin-top: 5px;
+}
+
+.hello{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.myorder{
+
+    height: 40px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(192, 187, 187);
+}
+
+.login-btn{
+    margin-top:10px;
+    appearance: button;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: var(--light-color);
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 40px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    /* transition: all .2s,box-shadow .08s ease-in; */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    
+    
+}
+.login-btn:disabled {
+    cursor: default;
+}
+
+.login-btn:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+.order-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.order-flex{
+    margin-top: 5px;
+    display: flex;
+    justify-content: start;
+    
+}
+.profile{
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(192, 187, 187);
+}
+.user-profile{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.user-img{
+    width: 42px;
+    height: 30px;
+    border: 2px solid rgb(215, 215, 215);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-img img{
+    width: 100%;
+    height: 100%;
+}
+.edit-profile{
+     margin-top:10px;
+    appearance: button;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: var(--light-color);
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 40px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    /* transition: all .2s,box-shadow .08s ease-in; */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    
+}
+.order{
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    margin-left: 10px;
+}
+.logout{
+    height: 40px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(192, 187, 187);
+    
+}
+.profile-wishlist{
+    height: 40px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(192, 187, 187);
+}
+.profile-wishlist-word{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(13, 12, 12);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.logout p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(13, 12, 12);
+    margin-left: 5px;
+
+}
+
+.cart{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align:center;
+}
+.cart-word{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-left: 5px;
+    margin-bottom: 3px;
+
+}
+.wishlist{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+.wishlist-word{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-left: 5px;
+    margin-bottom: 3px;
+
+}

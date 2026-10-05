@@ -1,0 +1,293 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/product_page.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="product_container">
+
+            <div class="left_side_box">
+                <div class="front_img">
+                    {% with first_image=data.images.first %}
+                    {% if first_image %}
+                    <img src="{{first_image.image.url}}" alt="">
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="all_image" id="imagescroll">
+                    {% for image in data.images.all %}
+                    <div class="images">
+                        <img src="{{image.image.url}}" alt="media/{{data.image}}">
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <div class="right_side_box">
+                <div class="upper_box">
+                    <h3>{{data.name}}</h3>
+                    <p class="text_design"> a perfect balance of exhilarating high-fidelty audio and the  effortless of Airpods</p>
+                    <div class="rating" id="rating"></div>
+                </div>
+                <div class="middel_box">
+                    <p style="color: #08a94b;margin-bottom: 5px; margin-top: 1%;"><b>Special price</b></p>
+                    <h3>₹{{data.price}}</h3>
+                    <p class="text_design">Secure, fast, and protected payment processing </p>
+                    
+                </div>
+                <div class="second_middel_box">
+                    <p style="margin-top: 1%;"><b>Choose a Color</b></p>
+                    <div class="color_section" id="color_section">
+                        {% for color in data.colors.all %}
+                            <div class="color"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="lower_box">
+                    <div class="count_item">
+                        <div class="qty-box">
+                            <button onclick="decrease()">-</button>
+                            <span id="qty">0</span>
+                            <button onclick="increase()">+</button>
+                        </div>
+                        <div>
+                            <p style="margin-top: 10px;">Only <span style="color: orange;">12 items </span>left !<br> Don't miss it</p>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <button class="buy_now">Buy Now</button>
+                        <button class="add_cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart({{ data.id }})">Add to Cart</button>
+                    </div>
+                    <div class="delivery-box">
+                        <div class="delivery-item">
+                            <div class="icon">
+                                <!-- Truck SVG -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 6h11v8H3V6z" stroke="#ff6a00" stroke-width="1.5"/>
+                                    <path d="M14 9h4l3 3v2h-7V9z" stroke="#ff6a00" stroke-width="1.5"/>
+                                    <circle cx="7" cy="17" r="2" stroke="#ff6a00" stroke-width="1.5"/>
+                                    <circle cx="17" cy="17" r="2" stroke="#ff6a00" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="text">
+                                <h4>Free Delivery</h4>
+                                <p>
+                                    Enter your Postal code for Delivery Availability
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <!-- Return Delivery -->
+                        <div class="delivery-item">
+                            <div class="icon">
+                                <!-- Return SVG -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 12h12a4 4 0 1 1 0 8h-3" stroke="#ff6a00" stroke-width="1.5"/>
+                                    <path d="M6 15l-3-3 3-3" stroke="#ff6a00" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="text">
+                                <h4>Return Delivery</h4>
+                                <p>
+                                    Free 30days Delivery Returns. <a href="#">Details</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product_details">
+        <h2 class="title">{{data.name}} Full Specifications</h2>
+        <div class="spec-container">
+            
+            <!-- General -->
+            <div class="spec-box">
+                <div class="spec-header">
+                    <h3>General details </h3>
+                </div>
+                <div class="spec-details">
+                    {{data.General.html | safe}}
+
+                </div>
+                
+            </div>
+            
+            <!-- Product Details -->
+            <div class="spec-box">
+                 <div class="spec-header">
+                    <h3>Product details</h3>
+                </div>
+                <div class="spec-details">
+
+                    {{data.Product_details.html | safe}}    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="similar_section">
+    <h2 class="title">Today's Best Deals For You!</h2>
+    <div class="display_item">
+        <div class="display-scroll" id="productScroll">
+            {% for data in related_product %}
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            {% endfor %}   
+        </div>
+    </div>
+    <div class="scroll-track-holder">
+        <div class="scroll-track">
+            <div class="scroll-fill" id="scroll-fill"></div>
+        </div>
+    </div>
+    
+    
+    
+    {% include "footer.html" %}
+    <script>
+        let rating=4.5;
+        let totalstars=5;
+        let html="";
+    
+        for (i=1;i<totalstars;i++){
+            if(i <= rating){
+                html+='<i class="fa-solid fa-star"style="color:#08a94b;"></i>';
+            }else if(i-rating===0.5){
+                 html += '<i class="fa-solid fa-star-half-stroke"style="color:#08a94b;"></i>';
+            }else{
+                 html += '<i class="fa-regular fa-star"style="color:#08a94b;"></i>';
+    
+            }
+        }   
+        html += '<span class="review-count">(121)</span>';
+        document.getElementById('rating').innerHTML = html;
+    
+        let count=0;
+        function increase(){
+            count++;
+            document.getElementById("qty").innerText=count;
+        }
+        function decrease(){
+            if (count >1){
+                count--;
+                document.getElementById("qty").innerText=count;
+            }
+            else{
+                document.getElementById("qty").innerText=0;
+            }
+    
+        }
+    
+    // heart section
+    document.querySelectorAll('.heart').forEach(heart => {
+        heart.addEventListener('click', function () {
+          this.classList.toggle('active');
+        });
+      });
+    
+    
+    const container = document.getElementById("imagescroll");
+    
+    function updateProgress() {
+      console.log(
+        "Scroll Left:", container.scrollLeft,
+        "Max Scroll:", container.scrollWidth - container.clientWidth
+      );
+    }
+    
+    container.addEventListener("scroll", updateProgress);
+    window.addEventListener("load", updateProgress);
+    
+    
+    
+    
+    function getCookie(name) {
+        let cookieValue = null;
+    
+        if (document.cookie && document.cookie !== '') {
+    
+            const cookies = document.cookie.split(';');
+    
+            for (let cookie of cookies) {
+    
+                cookie = cookie.trim();
+    
+                if (cookie.startsWith(name + '=')) {
+    
+                    cookieValue = decodeURIComponent(
+                        cookie.substring(name.length + 1)
+                    );
+    
+                    break;
+                }
+            }
+        }
+    
+        return cookieValue;
+    }
+    
+    
+    function addToCart(productId) {
+    
+        const quantity = parseInt(
+            document.getElementById("qty").innerText
+        );
+    
+        fetch("/add-cart/", {
+            method: "POST",
+    
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": getCookie("csrftoken")
+            },
+    
+            body: JSON.stringify({
+                product_id: productId,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+    
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+    
+            alert(data.message);
+    
+        })
+        .catch(error => {
+            console.error("Add cart error:", error);
+        });
+    }
+    
+    </script>
+</body>
+</html>
+<!-- <script src="{% static 'js/product_page.js' %}"></script> -->

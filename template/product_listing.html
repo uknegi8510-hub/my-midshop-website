@@ -1,0 +1,123 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/product_listing.css' %}">
+</head>
+<style>
+    .product a{
+        text-decoration: none;
+        display: block;
+        color: inherit;
+        
+    }
+</style>
+<body>
+<div class="listing-container">
+    <div class="filter-container">
+        <p class="filter">FILTERS</p>
+    </div>
+        <div class="product_section">
+            <div class="product_container">
+                {% for data in product_data %}
+                <div class="product">
+                    <a href="{% url 'product_page' data.slug %}">
+                    <div class="product_img">
+                        {% with first_image=data.images.first %}
+                        {% if first_image %}
+                        <img src="{{first_image.image.url}}" alt="">
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class="product_details">
+                        <div class="flex_content">
+                            <h5 style="margin-left:2%;margin-top: 2%;">{{data.name}}</h5>
+                            <h5 style="margin-right:2%;margin-top: 2%;">{{data.price}}</h5>
+                        </div>
+                        <p>Table with air purifier,stainer venner/backc</p>
+                        <p>⭐⭐⭐⭐⭐(121)</p>
+                        
+                        <button class="add_cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart({{ data.id}})">Add to cart</button>
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+</div>
+    
+</body>
+{% include 'footer.html' %}
+</html>
+<script>
+
+function getCookie(name) {
+    let cookieValue = null;
+
+    if (document.cookie && document.cookie !== '') {
+
+        const cookies = document.cookie.split(';');
+
+        for (let cookie of cookies) {
+
+            cookie = cookie.trim();
+
+            if (cookie.startsWith(name + '=')) {
+
+                cookieValue = decodeURIComponent(
+                    cookie.substring(name.length + 1)
+                );
+
+                break;
+            }
+        }
+    }
+
+    return cookieValue;
+}
+
+
+function addToCart(productId) {
+
+    fetch('/add-cart/', {
+        method: "POST",
+
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+
+        body: JSON.stringify({
+            product_id: productId,
+            quantity: 1
+        })
+    })
+
+    .then(response => response.json())
+
+    .then(data => {
+
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+
+        alert(data.message);
+        console.log(data);
+
+    })
+
+    .catch(error => {
+
+        console.error("Error:", error);
+        alert("Something went wrong.");
+
+    });
+}
+
+</script>

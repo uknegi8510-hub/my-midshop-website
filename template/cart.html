@@ -1,0 +1,389 @@
+{% load static %}
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<style>
+    
+
+
+</style>
+
+<body>
+<div class="process-section">
+
+    <div class="progress-container">
+
+        <div class="step {% if step > 1 %}completed{% elif step == 1 %}active{% endif %}">
+        <div class="circle">1</div>
+        <p>Cart</p>
+        </div>
+
+        <div class="line {% if step > 1 %}active{% endif %}"></div>
+
+        <div class="step {% if step > 2 %}completed{% elif step == 2 %}active{% endif %}">
+        <div class="circle">2</div>
+        <p>Address</p>
+        </div>
+
+        <div class="line {% if step > 2 %}active{% endif %}"></div>
+
+        <div class="step {% if step == 3 %}active{% endif %}">
+        <div class="circle">3</div>
+        <p>Payment</p>
+        </div>
+
+    </div>
+    
+    <br>
+</div>
+
+
+<div class="container">
+
+
+    <div class="cart-section">
+
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+        </div>
+        
+        <div class="cart-topic">
+            <div class="topic-image"></div>
+            <div class="topic-item"><span>Item</span></div>
+            <div class="topic-qty"><span>Qty</span></div>
+            <div class="topic-total"><span>Price</span></div>
+            <div class="topic-remove"><span>Remove</span></div>
+        </div>
+
+
+    <!-- ITEM 1 -->
+     {% for cart in cart_items %}
+    <div class="cart-item">
+        <div class="product">
+            {% with first_image=cart.product.images.first %}
+            {% if first_image %}
+            <img src="{{ first_image.image.url }}">
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="product-title">
+            <h4>{{cart.product.name}}</h4>
+            <p>Color: {{cart.color}}</p>
+        </div>
+
+        <div class="qty-box">
+            <button onclick="decrease(this)">-</button>
+            <span class="qty">{{cart.quantity}}</span>
+            <button onclick="increase(this)">+</button>
+        </div>
+
+        <div class="price" data-price="{{cart.product.price}}">
+            ₹{{cart.product.price}}
+        </div>
+        <div class="subtotal">
+        </div>
+        <div class="product-remove">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 100 100" width="30" height="30" stroke="#858484" onclick="removeCart({{cart.product.id}})">
+                      <path d="M20 25h60l-7 60H27zM15 25h70M35 18h30v7H35z"
+                            fill="none" stroke="#858484" stroke-width="6"
+                            stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M38 38l3 35M50 38v35M62 38l-3 35"
+                            stroke="#858484" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+        </div>
+
+
+    </div>
+    {% endfor %}
+    
+    
+    
+
+
+    </div>
+
+
+
+    <!-- SUMMARY -->
+    <div class="summary">
+
+        <h3>Summary</h3>
+
+        <div class="summary-item">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0</span>
+        </div>
+
+        <div class="summary-item">
+            <span>Shipping</span>
+            <span id="shipping">₹50</span>
+        </div>
+
+        <div class="summary-item" id="discount-box">
+            <span>Discount (10%)</span>
+             <span class="discount">₹0</span>
+        </div>
+
+        <hr>
+        <div class="discount-box">
+            Yay! Your total discount is <span class="discount">₹0</span>
+        </div>
+        <div class="summary-total"> 
+            <span>Total</span>
+            <span id="cart-total">₹0</span>
+        </div>
+
+            <a href="{% url 'address_page' %}" class="checkout-btn">Checkout</a>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+<script>
+
+function increase(btn) {
+
+    let cartItem = btn.closest(".cart-item");
+
+    let qty = cartItem.querySelector(".qty");
+    let price = parseFloat(
+        cartItem.querySelector(".price").dataset.price
+    );
+
+    let count = parseInt(qty.innerText);
+
+    count++;
+
+    qty.innerText = count;
+
+    updateItemSubtotal(cartItem);
+
+    updateTotal();
+}
+
+
+function decrease(btn) {
+
+    let cartItem = btn.closest(".cart-item");
+
+    let qty = cartItem.querySelector(".qty");
+
+    let count = parseInt(qty.innerText);
+
+    if (count > 1) {
+        count--;
+
+        qty.innerText = count;
+    }
+
+    updateItemSubtotal(cartItem);
+
+    updateTotal();
+}
+
+
+/* --------------------------------
+   CALCULATE INDIVIDUAL PRODUCT
+-------------------------------- */
+
+function updateItemSubtotal(cartItem) {
+
+    let qty = parseInt(
+        cartItem.querySelector(".qty").innerText
+    );
+
+    let price = parseFloat(
+        cartItem.querySelector(".price").dataset.price
+    );
+
+    let subtotal = qty * price;
+
+    cartItem.querySelector(".subtotal").innerText =
+        "₹" + subtotal.toFixed(2);
+}
+
+
+/* --------------------------------
+   CALCULATE CART TOTAL
+-------------------------------- */
+
+function updateTotal() {
+
+    let cartItems = document.querySelectorAll(".cart-item");
+
+    let subtotal = 0;
+
+    /* Calculate all product subtotals */
+
+    cartItems.forEach(cartItem => {
+
+        let qty = parseInt(
+            cartItem.querySelector(".qty").innerText
+        );
+
+        let price = parseFloat(
+            cartItem.querySelector(".price").dataset.price
+        );
+
+        let itemSubtotal = qty * price;
+
+        subtotal += itemSubtotal;
+
+        /* Update item subtotal */
+
+        cartItem.querySelector(".subtotal").innerText =
+            "₹" + itemSubtotal.toFixed(2);
+    });
+
+
+    /* --------------------------------
+       DISCOUNT
+    -------------------------------- */
+
+    let discountPercent = 10;
+
+    let discountAmount =
+        (subtotal * discountPercent) / 100;
+
+
+    /* Update both discount elements */
+
+    document.querySelectorAll(".discount").forEach(element => {
+
+        element.innerText =
+            "₹" + discountAmount.toFixed(2);
+
+    });
+
+
+    /* --------------------------------
+       SHIPPING
+    -------------------------------- */
+
+    let shipping = 50;
+
+    document.getElementById("shipping").innerText =
+        "₹" + shipping.toFixed(2);
+
+
+    /* --------------------------------
+       SUBTOTAL
+    -------------------------------- */
+
+    document.getElementById("subtotal").innerText =
+        "₹" + subtotal.toFixed(2);
+
+
+    /* --------------------------------
+       FINAL TOTAL
+    -------------------------------- */
+
+    let total =
+        subtotal - discountAmount + shipping;
+
+
+    document.getElementById("cart-total").innerText =
+        "₹" + total.toFixed(2);
+}
+
+
+/* --------------------------------
+   RUN CALCULATOR WHEN PAGE LOADS
+-------------------------------- */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    updateTotal();
+
+});
+
+
+/* --------------------------------
+   CSRF COOKIE
+-------------------------------- */
+
+function getCookie(name) {
+
+    let cookieValue = null;
+
+    if (document.cookie && document.cookie !== '') {
+
+        const cookies = document.cookie.split(';');
+
+        for (let cookie of cookies) {
+
+            cookie = cookie.trim();
+
+            if (cookie.startsWith(name + '=')) {
+
+                cookieValue = decodeURIComponent(
+                    cookie.substring(name.length + 1)
+                );
+
+                break;
+            }
+        }
+    }
+
+    return cookieValue;
+}
+
+
+/* --------------------------------
+   REMOVE CART ITEM
+-------------------------------- */
+
+function removeCart(productId) {
+
+    fetch('/cart-remove', {
+
+        method: "DELETE",
+
+        headers: {
+            'Content-Type': "application/json",
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+
+        body: JSON.stringify({
+            product_id: productId
+        })
+
+    })
+
+    .then(response => response.json())
+
+    .then(data => {
+
+        if (data.error) {
+
+            alert(data.error);
+            return;
+
+        }
+
+        location.reload();
+
+    })
+
+    .catch(error => {
+
+        console.error("Error:", error);
+
+        alert("Something went wrong");
+
+    });
+
+}
+
+
+</script>
+{% include 'footer.html' %}                               

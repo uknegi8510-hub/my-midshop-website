@@ -1,0 +1,501 @@
+{% load static %}
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Register Slide</title>
+  <script src="{% static 'js/jquery.js' %}"></script>
+
+
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+:root{
+    --primary-color:#1A2421 ;
+    --secondary-color:rgb(31, 74, 31);
+}
+
+.container {
+  height: 100vh;
+  /* background: linear-gradient(120deg, #7f7fd5, #86a8e7, #91eae4);
+   */
+   /* background: rgb(225, 224, 224); */
+   background-color:rgb(221, 228, 221);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CARD */
+.wrapper {
+  width: 820px;
+  height: 460px;
+  background: #fff;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* FORMS */
+
+
+/* FORMS WRAPPER */
+.forms-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* FORMS */
+.form {
+  width: 50%;
+  padding: 60px 40px;
+}
+
+/* REGISTER HIDDEN INITIALLY */
+.register {
+  display: block;
+}
+
+.wrapper.active .login {
+  display: none;
+}
+
+.wrapper.active .register {
+  display: block;
+}
+
+/* SLIDER */
+.slider {
+  width: 50%;
+  height: 100%;
+  background-color: #1A2421 ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 0 120px 120px 0;
+}
+
+.wrapper.active .slider {
+  transform: translateX(100%);
+}
+
+/* INPUT */
+.form input:not(.otp-input) {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 12px;
+  background: #6a5acd;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* SLIDING PURPLE BOX */
+.slider {
+  width: 50%;
+  height: 100%;
+  background: #6a5acd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 120px 120px 0;
+  transition: transform 0.5s ease-in-out, 
+              border-radius 0.8s ease-in-out; 
+  z-index: 10;
+}
+
+/* MOVE SLIDER */
+.wrapper.active .slider {
+  transform: translateX(100%);
+  /* transition: transform 0.5s ease; */
+  border-radius: 120px 0px 0px 120px;
+}
+
+/* TEXT INSIDE SLIDER */
+.slider-content {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.slider-content button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.login-slider{
+  display: none;
+}
+.wrapper.active .login-slider { display:block; }
+.wrapper.active .register-slider { display:none; }
+
+.otp-send{
+  display: none;
+  color: rgb(45, 44, 44);
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.otp-container{
+  display:none;
+  justify-content:center;
+  gap: 30px;
+}
+.otp-input{
+  width: 50px;
+  height: 50px;
+  font-size: 15px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 10px;
+}
+.otp-input:focus {
+    border-color:rgb(53, 52, 52);
+}
+
+.otp-input:disabled {
+    background-color: #e9ecef;
+}
+input[readonly] {
+    background-color: #f3f3f3;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.locked-input {
+    background-color: #f3f3f3;
+    opacity: 0.8;
+}
+</style>
+<body>
+<div class="container">
+    <div class="wrapper" id="wrapper">
+
+      <div class="forms-container">
+        <div class="form register">
+            <form action="" method="post">
+              {% csrf_token %}
+            <h2>Sign Up</h2>
+            <input type="text" required placeholder="Username" name="username" id="username">
+            <input type="email" required placeholder="Email" name="email" id="email">
+            <input type="password" required placeholder="Password" name="password" id="password">
+            <h4 class="otp-send" id="otp-send">OTP:</h4>
+            <div class="otp-container" id="otp-container">
+                <input type="text" maxlength="1" class="otp-input" id="otp-1"/>
+                <input type="text" maxlength="1" class="otp-input" id="otp-2"/>
+                <input type="text" maxlength="1" class="otp-input" id="otp-3"/>
+                <input type="text" maxlength="1" class="otp-input" id="otp-4"/>
+            </div>
+            <p id="register-error" style="display:none; color:red;"></p>
+            <button class="main-btn" id="email-verify">Email Verify</button>
+            <button class="main-btn" id="register-submit">Submit</button>
+          </form>
+          </div>
+          <div class="form login">
+          <form action="" method="POST">
+          {% csrf_token %}
+          <h2>Login</h2>
+            <input type="text" required placeholder="Username" name="email" id="login_email">
+            <input type="password" required placeholder="Password" name="password" id ="login_password">
+            <h4 class="otp-send" id="login-otp-send">OTP:</h4>
+            <div class="otp-container" id="login-otp-container">
+                <input type="text" maxlength="1" class="otp-input" id="login-otp-1"/>
+                <input type="text" maxlength="1" class="otp-input" id="login-otp-2"/>
+                <input type="text" maxlength="1" class="otp-input" id="login-otp-3"/>
+                <input type="text" maxlength="1" class="otp-input" id="login-otp-4"/>
+            </div>
+            <p id="login-error" style="display:none; color:red;"></p>
+            <button type="button" class="main-btn"  id="login-verify">Login</button>
+            <button type="button" class="main-btn"  id="login-submit">Submit</button>
+          </form>
+          </div>
+
+      </div>
+
+      <div class="slider">
+        <div class="slider-content">
+          <div class="register-slider" id="register-slider">
+            <h2>Hello, Welcome!</h2>
+            <p>Don't have an account?</p>
+            <button id="registerBtn">Register</button>
+            
+          </div>
+          <div class="login-slider" id="login-slider">
+            <h2>Hello, Welcome!</h2>
+            <p>If you Alredy have a account?</p>
+            <button id="loginBtn">login</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+<script>
+ /* =========================
+   SLIDER SWITCH
+========================= */
+const wrapper = document.getElementById("wrapper");
+const registerBtn = document.getElementById("registerBtn");
+const loginBtn = document.getElementById("loginBtn");
+
+registerBtn.addEventListener("click", () => {
+  wrapper.classList.add("active");
+});
+
+loginBtn.addEventListener("click", () => {
+  wrapper.classList.remove("active");
+});
+
+
+/* =========================
+   OTP HANDLER (SAFE VERSION)
+========================= */
+function handleOTP(containerId){
+    const inputs = document.querySelectorAll(`#${containerId} .otp-input`);
+
+    inputs.forEach((input, index) => {
+
+        input.addEventListener('input', () => {
+            if (input.value.length > 1) {
+                input.value = input.value[0];
+            }
+
+            if (input.value !== '' && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && input.value === '' && index > 0) {
+                inputs[index - 1].focus();
+            }
+        });
+
+    });
+}
+
+handleOTP('otp-container');
+handleOTP('login-otp-container');
+
+
+/* =========================
+   CSRF COOKIE
+========================= */
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+            cookie = cookie.trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+
+/* =========================
+   DOCUMENT READY
+========================= */
+$(document).ready(function(){
+
+    $('#otp-container').hide();
+    $('#register-submit').hide();
+    $('#login-submit').hide();
+    $('#login-otp-container').hide();
+
+
+/* =========================
+   REGISTER EMAIL VERIFY
+========================= */
+$('#email-verify').click(function(e){
+    e.preventDefault();
+
+    let username = $("#username").val();
+    let email = $("#email").val();
+    let password = $("#password").val();
+
+    $.ajax({
+        type: "POST",
+        url: "/register/",
+        headers: {
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        data: { username, email, password },
+
+        success: function(response){
+
+            $("#username, #email, #password")
+                .prop("readonly", true)
+                .addClass("locked-input");
+
+            $('#otp-send').show();
+            $('#otp-container').show();
+            $('#register-submit').show();
+            $('#email-verify').hide();
+        },
+
+        error: function(){
+            $('#register-error')
+                .show()
+                .text("Email already registered");
+        }
+    });
+});
+
+
+/* =========================
+   REGISTER OTP VERIFY
+========================= */
+$('#register-submit').click(function(e){
+    e.preventDefault();
+
+    let email = $('#email').val();
+    let register_otp = '';
+
+    $('#otp-container .otp-input').each(function(){
+        register_otp += $(this).val();
+    });
+
+    if (register_otp.length !== 4){
+        $('#register-error').show()
+            .text('Enter valid 4-digit OTP');
+        return;
+    }
+    $.ajax({
+        type:'POST',
+        url:'/verify/',
+        headers:{
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        data:{ email, register_otp },
+
+        success:function(){
+            window.location.href = "/";
+        },
+
+        error:function(){
+            $('#register-error')
+                .show()
+                .text("Wrong OTP entered!");
+        }
+    });
+});
+
+
+/* =========================
+   LOGIN VERIFY (SEND OTP)
+========================= */
+$('#login-verify').click(function(e){
+    e.preventDefault();
+
+    let email=$('#login_email').val();
+    let password =$('#login_password').val();
+    $.ajax({
+        type:"POST",
+        url:"/login_otp/",
+        headers:{
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        data:{ email:email, password:password },
+
+        success:function(response){
+          if(response.status==200){
+            $('#login-otp-send').show();      
+            $('#login-otp-container').show();
+            $('#login-submit').show();
+            $('#login-verify').hide();
+          }
+        },
+
+        error:function(xhr){
+          console.log("not work")
+          console.log(xhr.responseJSON);
+            $('#login-error')
+                .show()
+                .text("Email or Password incorrect");
+        }
+    });
+});
+
+
+
+/* =========================
+   LOGIN OTP VERIFY
+========================= */
+$('#login-submit').click(function(e){
+    e.preventDefault();
+    let email= $("#login_email").val();
+    let login_otp = '';
+
+    $('#login-otp-container .otp-input').each(function(){
+        login_otp += $(this).val();
+    });
+
+    if (login_otp.length !== 4){
+        $('#login-error').show()
+            .text('Enter valid 4-digit OTP');
+        return;
+    }
+    $.ajax({
+        type:'POST',
+        url:"/login_verify/",
+        headers:{
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        data:{
+            email:email,
+            login_otp:login_otp
+        },
+
+        success:function(response){
+          if(response.status==200){
+            window.location.href = "/";
+          }
+        },
+
+        error:function(xhr){
+          let login_error=xhr
+            $('#login-error').show().text(login_error);
+        }
+    });
+});
+
+});
+
+</script>
+
+</body>
+</html>
