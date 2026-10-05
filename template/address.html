@@ -296,7 +296,7 @@ margin-top: 10px;
     </div>
 
 </div>
-
+</div>
 
 <!-- Address Form Popup -->
 
@@ -313,10 +313,12 @@ margin-top: 10px;
 <button onclick="closeForm()" class="cancel">Cancel</button>
 
 </div>
+{% include 'footer.html' %}
 </body>
 </html>
+
 <script>
-    let currentStep = 1;
+let currentStep = 1;
 
 function nextStep(){
 
@@ -384,4 +386,3 @@ function saveAddress(){
 
 }
 </script>
-{% include 'footer.html' %}

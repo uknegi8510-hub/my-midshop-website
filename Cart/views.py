@@ -10,7 +10,6 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 @login_required
 def cart(request):
-
     cart_items = Cart.objects.filter(user=request.user)
 
     totals = calculate_cart_total(cart_items)
@@ -125,4 +124,4 @@ def address_page(request):
         "step": 2,
     }
 
-    return render(request, "address.html", context)
+    return render(request,"address.html", context)
