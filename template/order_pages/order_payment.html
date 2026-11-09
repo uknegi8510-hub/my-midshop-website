@@ -1,0 +1,981 @@
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+:root {
+    --mp-green: #228b22;
+    --mp-dark: #176b17;
+    --mp-light: #eff8ef;
+    --mp-bg: #f6f8f6;
+    --mp-text: #202820;
+    --mp-muted: #7b847b;
+    --mp-border: #e7ece7;
+}
+
+.mid-payment {
+    background: var(--mp-bg);
+    min-height: 100vh;
+    padding: 30px 6%;
+    color: var(--mp-text);
+    animation: mpFade .5s ease;
+}
+
+@keyframes mpFade {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 35px;
+}
+
+.mp-logo {
+    color: var(--mp-green);
+    font-size: 27px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.mp-logo span {
+    color: var(--mp-text);
+}
+
+.mp-secure {
+    color: var(--mp-green);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.mp-progress {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 0 auto 35px;
+    font-size: 13px;
+    color: #9aa39a;
+}
+
+.mp-progress span {
+    padding-bottom: 9px;
+}
+
+.mp-progress .done {
+    color: var(--mp-green);
+}
+
+.mp-progress .current {
+    color: var(--mp-green);
+    font-weight: 750;
+    border-bottom: 2px solid var(--mp-green);
+}
+
+.mp-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(300px, .85fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+
+.mp-main,
+.mp-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.mp-card,
+.mp-trust {
+    background: #fff;
+    border: 1px solid var(--mp-border);
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 0 5px 22px rgba(0, 40, 0, .035);
+    animation: mpCard .55s ease both;
+}
+
+.mp-card:nth-child(2) {
+    animation-delay: .1s;
+}
+
+@keyframes mpCard {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mp-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mp-heading h3,
+.mp-card h3 {
+    font-size: 17px;
+    font-weight: 750;
+    margin: 0;
+}
+
+.mp-heading p {
+    color: var(--mp-muted);
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+.mp-icon {
+    font-size: 23px;
+}
+
+.mp-address {
+    background: #fafcfa;
+    border: 1px solid var(--mp-border);
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.6;
+}
+
+.mp-address strong {
+    font-size: 14px;
+}
+
+.mp-address p {
+    font-size: 12px;
+    color: var(--mp-muted);
+    margin: 4px 0;
+}
+
+.mp-group-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #758075;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .8px;
+    margin: 23px 0 11px;
+}
+
+.mp-group-title span {
+    color: var(--mp-green);
+    background: var(--mp-light);
+    border-radius: 20px;
+    padding: 5px 9px;
+    letter-spacing: 0;
+}
+
+.mp-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid var(--mp-border);
+    border-radius: 11px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.mp-option:hover {
+    border-color: var(--mp-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 16px rgba(34,139,34,.07);
+}
+
+.mp-option.selected {
+    border-color: var(--mp-green);
+    background: #f3faf3;
+    box-shadow: 0 0 0 2px rgba(34,139,34,.06);
+}
+
+.mp-option input {
+    display: none;
+}
+
+.mp-method-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #f0f3f0;
+    color: var(--mp-green);
+    font-size: 19px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.upi-icon {
+    background: #eaf5ff;
+    color: #1767a5;
+    font-size: 14px;
+}
+
+.cod-icon {
+    background: #fff5e9;
+    color: #bc791f;
+}
+
+.mp-option-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mp-option-info strong {
+    font-size: 13px;
+    display: block;
+}
+
+.mp-option-info p {
+    font-size: 11px;
+    color: var(--mp-muted);
+    margin: 5px 0 0;
+    line-height: 1.5;
+}
+
+.mp-radio {
+    width: 19px;
+    height: 19px;
+    border: 2px solid #cbd3cb;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.mp-option.selected .mp-radio {
+    border-color: var(--mp-green);
+}
+
+.mp-option.selected .mp-radio::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: var(--mp-green);
+    border-radius: 50%;
+}
+
+.mp-security {
+    padding: 13px;
+    margin: 20px 0;
+    background: var(--mp-light);
+    color: var(--mp-green);
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.mp-pay-btn {
+    width: 100%;
+    border: 0;
+    border-radius: 9px;
+    padding: 16px;
+    background: var(--mp-green);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: .25s ease;
+}
+
+.mp-pay-btn:hover {
+    background: var(--mp-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(34,139,34,.2);
+}
+
+.mp-pay-btn:active {
+    transform: scale(.98);
+}
+
+.mp-products {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.mp-product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.mp-product img,
+.mp-placeholder {
+    width: 52px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #f1f4f1;
+    flex-shrink: 0;
+}
+
+.mp-placeholder {
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.mp-product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mp-product-info strong {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.mp-product-info small {
+    display: block;
+    margin-top: 5px;
+    color: var(--mp-muted);
+}
+
+.mp-price-row,
+.mp-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.mp-price-row span {
+    color: var(--mp-muted);
+}
+
+.mp-discount strong {
+    color: var(--mp-green);
+}
+
+.mp-total {
+    border-top: 1px dashed var(--mp-border);
+    padding-top: 18px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.mp-total strong {
+    font-size: 20px;
+    color: var(--mp-green);
+}
+
+.mp-saving {
+    background: var(--mp-light);
+    color: var(--mp-green);
+    padding: 11px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 650;
+    margin-top: 17px;
+}
+
+.mp-trust {
+    font-size: 12px;
+    color: var(--mp-muted);
+}
+
+.mp-trust p {
+    margin: 9px 0;
+}
+
+@media(max-width: 850px) {
+    .mp-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .mp-sidebar {
+        order: -1;
+    }
+}
+
+@media(max-width: 550px) {
+    .mid-payment {
+        padding: 20px 13px;
+    }
+
+    .mp-card,
+    .mp-trust {
+        padding: 17px;
+    }
+
+    .mp-progress {
+        gap: 14px;
+        font-size: 11px;
+    }
+
+    .mp-logo {
+        font-size: 23px;
+    }
+
+    .mp-secure {
+        font-size: 11px;
+    }
+
+    .mp-option {
+        padding: 12px 10px;
+        gap: 10px;
+    }
+
+    .mp-method-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 16px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .mid-payment,
+    .mp-card {
+        animation: none;
+    }
+
+    .mp-option,
+    .mp-pay-btn {
+        transition: none;
+    }
+}
+
+    </style>
+</head>
+    <div class="mid-payment">
+
+    <header class="mp-header">
+        <a href="/" class="mp-logo">MID<span>SHOP</span></a>
+        <span class="mp-secure">🔒 Secure Checkout</span>
+    </header>
+
+    <div class="mp-progress">
+        <span class="done">✓ Address</span>
+        <span class="done">✓ Summary</span>
+        <span class="current">3 Payment</span>
+    </div>
+
+    <div class="mp-layout">
+
+        <main class="mp-main">
+
+            <!-- DELIVERY ADDRESS -->
+            <section class="mp-card">
+                <div class="mp-heading">
+                    <div>
+                        <h3>Delivery Address</h3>
+                        <p>Delivering your order to</p>
+                    </div>
+                    <span class="mp-icon">📍</span>
+                </div>
+
+                <div class="mp-address">
+                    <strong>{{ shipping_address.full_name }}</strong>
+                    <p>
+                        {{ shipping_address.address_line }},
+                        {{ shipping_address.city }},
+                        {{ shipping_address.state }} -
+                        {{ shipping_address.pincode }}
+                    </p>
+                    <p>Mobile: {{ shipping_address.phone }}</p>
+                </div>
+            </section>
+
+            <!-- PAYMENT METHODS -->
+            <section class="mp-card">
+
+                <div class="mp-heading">
+                    <div>
+                        <h3>Payment Options</h3>
+                        <p>Choose your preferred payment method</p>
+                    </div>
+                    <span class="mp-icon">💳</span>
+                </div>
+
+                <form id="paymentForm" method="POST" data-create-url="{% url 'create_razorpay_order' order.id %}" data-verify-url="{% url 'verify_razorpay_payment' order.id %}" data-cod-url="{% url 'place_cod_order' order.id %}" >
+                    {% csrf_token %}
+                    <input type="hidden"
+                           id="orderId"
+                           value="{{ order.id }}">
+
+                    <!-- UPI -->
+                    <div class="mp-group-title">
+                        UPI PAYMENT
+                        <span>Recommended</span>
+                    </div>
+
+                    <label class="mp-option selected">
+                        <input type="radio"
+                               name="payment_method"
+                               value="upi"
+                               checked>
+
+                        <div class="mp-method-icon upi-icon">UPI</div>
+
+                        <div class="mp-option-info">
+                            <strong>UPI Apps</strong>
+                            <p>Google Pay, PhonePe, Paytm & more</p>
+                        </div>
+
+                        <span class="mp-radio"></span>
+                    </label>
+
+                    <!-- CARDS -->
+                    <div class="mp-group-title">
+                        CARDS
+                    </div>
+
+                    <label class="mp-option">
+                        <input type="radio"
+                               name="payment_method"
+                               value="card">
+
+                        <div class="mp-method-icon">💳</div>
+
+                        <div class="mp-option-info">
+                            <strong>Credit / Debit Card</strong>
+                            <p>Visa, Mastercard, RuPay and more</p>
+                        </div>
+
+                        <span class="mp-radio"></span>
+                    </label>
+
+                    <!-- NET BANKING -->
+                    <div class="mp-group-title">
+                        OTHER ONLINE METHODS
+                    </div>
+
+                    <label class="mp-option">
+                        <input type="radio"
+                               name="payment_method"
+                               value="netbanking">
+
+                        <div class="mp-method-icon">🏦</div>
+
+                        <div class="mp-option-info">
+                            <strong>Net Banking</strong>
+                            <p>Pay directly through your bank</p>
+                        </div>
+
+                        <span class="mp-radio"></span>
+                    </label>
+
+                    <!-- WALLET -->
+                    <label class="mp-option">
+                        <input type="radio"
+                               name="payment_method"
+                               value="wallet">
+
+                        <div class="mp-method-icon">👛</div>
+
+                        <div class="mp-option-info">
+                            <strong>Wallets</strong>
+                            <p>Choose an available wallet in Checkout</p>
+                        </div>
+
+                        <span class="mp-radio"></span>
+                    </label>
+
+                    <!-- COD -->
+                    <div class="mp-group-title">
+                        PAY ON DELIVERY
+                    </div>
+
+                    <label class="mp-option">
+                        <input type="radio"
+                               name="payment_method"
+                               value="cod">
+
+                        <div class="mp-method-icon cod-icon">💵</div>
+
+                        <div class="mp-option-info">
+                            <strong>Cash on Delivery</strong>
+                            <p>Pay cash when your order arrives</p>
+                        </div>
+
+                        <span class="mp-radio"></span>
+                    </label>
+
+                    <div class="mp-security">
+                        🔒 Your payment is processed securely.
+                    </div>
+
+                    <button type="submit" class="mp-pay-btn" id="payButton">
+                        <span id="payButtonText">Continue</span>
+                        <span>→</span>
+                    </button>
+
+                </form>
+            </section>
+        </main>
+
+        <!-- ORDER SUMMARY -->
+        <aside class="mp-sidebar">
+
+            <section class="mp-card">
+
+                <h3>Order Summary</h3>
+
+                <p class="mp-order-number">
+                    Order #{{ order.order_number }}
+                </p>
+
+                <div class="mp-products">
+
+                    {% for item in order_items %}
+                    <div class="mp-product">
+
+                        {% if item.product and item.product.image %}
+                        <img src="{{ item.product.image.url }}"
+                             alt="{{ item.product_name }}">
+                        {% else %}
+                        <div class="mp-placeholder">📦</div>
+                        {% endif %}
+
+                        <div class="mp-product-info">
+                            <strong>{{ item.product_name }}</strong>
+                            <small>Quantity: {{ item.quantity }}</small>
+                        </div>
+
+                        <strong>₹{{ item.subtotal|floatformat:2 }}</strong>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div class="mp-price-row">
+                    <span>Subtotal</span>
+                    <strong>₹{{ subtotal|floatformat:2 }}</strong>
+                </div>
+
+                <div class="mp-price-row mp-discount">
+                    <span>Discount</span>
+                    <strong>- ₹{{ discount|floatformat:2 }}</strong>
+                </div>
+
+                <div class="mp-price-row">
+                    <span>Delivery</span>
+                    <strong>₹{{ shipping|floatformat:2 }}</strong>
+                </div>
+
+                <div class="mp-total">
+                    <span>Total Amount</span>
+                    <strong>₹{{ total|floatformat:2 }}</strong>
+                </div>
+
+                <div class="mp-saving">
+                    🎉 You saved ₹{{ discount|floatformat:2 }}
+                </div>
+
+            </section>
+
+            <section class="mp-trust">
+                <p>🔐 Secure Payment Processing</p>
+                <p>🚚 Reliable Delivery</p>
+                <p>💚 Midshop Customer Support</p>
+            </section>
+
+        </aside>
+
+    </div>
+</div>
+
+{% include 'header.html' %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    const options = document.querySelectorAll(".mp-option");
+    const form = document.getElementById("paymentForm");
+
+    options.forEach(function (option) {
+
+        option.addEventListener("change", function () {
+
+            options.forEach(function (item) {
+                item.classList.remove("selected");
+            });
+
+            option.classList.add("selected");
+
+        });
+
+    });
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const selected = form.querySelector(
+            'input[name="payment_method"]:checked'
+        );
+
+        if (!selected) {
+            alert("Please select a payment method.");
+            return;
+        }
+
+        const method = selected.value;
+
+        if (method === "cod") {
+            console.log("Selected Cash on Delivery");
+            // Connect your Django COD view here.
+            return;
+        }
+
+        console.log("Selected Razorpay method:", method);
+
+        // Connect your create_razorpay_order view here.
+        // Pass the selected method to Razorpay Checkout.
+
+    });
+
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("paymentForm");
+    const options = document.querySelectorAll(".mp-option");
+    const payButton = document.getElementById("payButton");
+    const payButtonText = document.getElementById("payButtonText");
+
+    if (!form || !payButton) {
+        console.error("Payment form or button not found.");
+        return;
+    }
+
+    const csrfToken = form.querySelector(
+        '[name="csrfmiddlewaretoken"]'
+    ).value;
+
+    // Highlight selected payment method
+    options.forEach(function (option) {
+        option.addEventListener("change", function () {
+            options.forEach(item => item.classList.remove("selected"));
+            option.classList.add("selected");
+        });
+    });
+
+    function setLoading(isLoading) {
+        payButton.disabled = isLoading;
+        payButton.style.opacity = isLoading ? "0.7" : "1";
+        payButtonText.textContent = isLoading
+            ? "Please wait..."
+            : "Continue";
+    }
+
+    async function postRequest(url, data) {
+
+        const response = await fetch(url, {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-CSRFToken": csrfToken
+            },
+            body: new URLSearchParams(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || "Something went wrong.");
+        }
+
+        return result;
+    }
+
+    // Payment form submission
+    form.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const selected = form.querySelector(
+            'input[name="payment_method"]:checked'
+        );
+
+        if (!selected) {
+            alert("Please select a payment method.");
+            return;
+        }
+
+        const method = selected.value;
+
+        setLoading(true);
+
+        try {
+
+            // CASH ON DELIVERY
+            if (method === "cod") {
+
+                const result = await postRequest(
+                    form.dataset.codUrl,
+                    {}
+                );
+
+                if (result.success) {
+                    window.location.href = result.redirect_url;
+                } else {
+                    throw new Error(result.error || "COD order failed.");
+                }
+
+                return;
+            }
+
+            // Check Razorpay library
+            if (typeof window.Razorpay === "undefined") {
+                throw new Error(
+                    "Razorpay library not loaded. Check checkout.js."
+                );
+            }
+
+            // Create Razorpay order
+            const result = await postRequest(
+                form.dataset.createUrl,
+                {
+                    payment_method: method
+                }
+            );
+
+            const methodNames = {
+                upi: "Pay via UPI",
+                netbanking: "Pay via Net Banking",
+                card: "Pay via Card",
+                wallet: "Pay via Wallet"
+            };
+
+            // Razorpay configuration
+            const razorpayOptions = {
+
+                key: result.key,
+                amount: result.amount,
+                currency: result.currency,
+
+                name: "Midshop",
+                description: "Order Payment",
+                order_id: result.razorpay_order_id,
+
+                config: {
+                    display: {
+                        blocks: {
+                            selected_method: {
+                                name: methodNames[method],
+                                instruments: [
+                                    {
+                                        method: method
+                                    }
+                                ]
+                            }
+                        },
+                        sequence: ["block.selected_method"],
+                        preferences: {
+                            show_default_blocks: false
+                        }
+                    }
+                },
+
+                prefill: {
+                    name: result.customer_name,
+                    email: result.customer_email,
+                    contact: result.customer_phone
+                },
+
+                notes: {
+                    order_id: document.getElementById("orderId").value
+                },
+
+                theme: {
+                    color: "#228b22"
+                },
+
+                handler: async function (paymentResponse) {
+
+                    try {
+
+                        const verifyResult = await postRequest(
+                            form.dataset.verifyUrl,
+                            {
+                                razorpay_payment_id:
+                                    paymentResponse.razorpay_payment_id,
+
+                                razorpay_order_id:
+                                    paymentResponse.razorpay_order_id,
+
+                                razorpay_signature:
+                                    paymentResponse.razorpay_signature
+                            }
+                        );
+
+                        if (verifyResult.success) {
+                            window.location.href =
+                                verifyResult.redirect_url;
+                        } else {
+                            throw new Error(
+                                verifyResult.error || "Payment verification failed."
+                            );
+                        }
+
+                    } catch (error) {
+                        alert(error.message);
+                        setLoading(false);
+                    }
+                },
+
+                modal: {
+                    ondismiss: function () {
+                        setLoading(false);
+                    }
+                }
+            };
+
+            // Open Razorpay only once
+            const razorpay = new window.Razorpay(razorpayOptions);
+
+            razorpay.on("payment.failed", function (response) {
+
+                alert(
+                    response.error.description ||
+                    "Payment failed. Please try again."
+                );
+
+                setLoading(false);
+            });
+
+            razorpay.open();
+
+        } catch (error) {
+
+            alert(error.message);
+            setLoading(false);
+
+            console.error("Payment Error:", error);
+        }
+
+    });
+
+});
+
+</script>
+</body>
+</html>

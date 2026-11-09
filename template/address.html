@@ -46,11 +46,11 @@
     background:gray;
     margin-bottom: 18px;
 }
-.step.active .circle{
+.step.active.circle{
 border-color:#6391fd;
 }
 
-.step.completed .circle{
+.step.completed.circle{
 background:#6391fd;
 color:white;
 border-color:#6391fd;
@@ -200,6 +200,7 @@ align-items: center;
 text-align: center;
 margin-top: 10px;
 }
+
 </style>
 <body>
 <div class="process-section">
@@ -208,14 +209,14 @@ margin-top: 10px;
 
         <div class="step {% if step > 1 %}completed{% elif step == 1 %}active{% endif %}">
         <div class="circle">1</div>
-        <p>Cart</p>
+        <p>Address</p>
         </div>
 
         <div class="line {% if step > 1 %}active{% endif %}"></div>
 
         <div class="step {% if step > 2 %}completed{% elif step == 2 %}active{% endif %}">
         <div class="circle">2</div>
-        <p>Address</p>
+        <p>Order Summary</p>
         </div>
 
         <div class="line {% if step > 2 %}active{% endif %}"></div>

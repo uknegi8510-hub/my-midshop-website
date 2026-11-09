@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 from Accounts.views import *
 from Cart.views import  *
 from Wishlist.views import  *
+from Order.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,7 @@ urlpatterns = [
     path('',include("Accounts.urls")),
     path('',include("Cart.urls")),
     path('',include("Wishlist.urls")),
+    path('',include("Order.urls")),
     path('register/',RegisterAPI.as_view()),
     path('verify/',VerifyRegisterOTP.as_view()),
     path('login_otp/',LoginAPIView.as_view()),
@@ -38,5 +40,6 @@ urlpatterns = [
     path("cart-remove/",removeCartAPIView.as_view()),
     path('add-wishlist/', AddToWishlistAPIView.as_view()),
     path('add-wishlist/remove/',WishlistDeleteAPIView.as_view()),
+   
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

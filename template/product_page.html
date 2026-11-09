@@ -37,9 +37,9 @@
                     <div class="rating" id="rating"></div>
                 </div>
                 <div class="middel_box">
-                    <p style="color: #08a94b;margin-bottom: 5px; margin-top: 1%;"><b>Special price</b></p>
-                    <h3>₹{{data.price}}</h3>
-                    <p class="text_design">Secure, fast, and protected payment processing </p>
+                    <p style="color: #08a94b;margin-bottom: 5px; margin-top: 1%;"><b>Special price </b></p>
+                    <h3> ₹{{data.price}} </h3>
+                    <p class="text_design"> Secure, fast, and protected payment processing </p>
                     
                 </div>
                 <div class="second_middel_box">
@@ -54,7 +54,7 @@
                     <div class="count_item">
                         <div class="qty-box">
                             <button onclick="decrease()">-</button>
-                            <span id="qty">0</span>
+                            <span id="qty">1</span>
                             <button onclick="increase()">+</button>
                         </div>
                         <div>
@@ -62,7 +62,9 @@
                         </div>
                     </div>
                     <div class="button-box">
-                        <button class="buy_now">Buy Now</button>
+                        <a href="{% url 'buy_now' data.id %}">
+                            <button class="buy_now">Buy Now</button>
+                        </a>
                         <button class="add_cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart({{ data.id }})">Add to Cart</button>
                     </div>
                     <div class="delivery-box">
@@ -255,7 +257,8 @@
     function addToCart(productId) {
     
         const quantity = parseInt(
-            document.getElementById("qty").innerText
+            document.getElementById("quantity").value,
+            10
         );
     
         fetch("/add-cart/", {
@@ -290,4 +293,3 @@
     </script>
 </body>
 </html>
-<!-- <script src="{% static 'js/product_page.js' %}"></script> -->

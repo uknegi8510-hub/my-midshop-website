@@ -1,0 +1,1401 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ product.name|default:'Product Details' }} | MIDSHOP</title>
+  <!-- <link rel="stylesheet" href="{% static 'css/product_details.css' %}">
+  <script src="{% static 'js/product_details.js' %}" defer></script> -->
+  <style>
+    :root {
+    --green: #073f2c;
+    --green-dark: #042c20;
+    --muted: #687486;
+    --line: #e5e8ed;
+    --surface: #f7f8fa;
+    --ink: #151b25
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif
+}
+
+button,
+input {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.product-page {
+    width: min(100% - 48px, 1380px);
+    margin: 0 auto;
+    padding: 24px 0 60px
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 30px
+}
+
+.breadcrumbs a:hover {
+    color: var(--green);
+    text-decoration: underline
+}
+
+.product-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 20px;
+    min-width: 0
+}
+
+.thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 640px;
+    overflow-y: auto;
+    scrollbar-width: thin
+}
+
+.thumbnail {
+    width: 86px;
+    height: 98px;
+    border: 2px solid transparent;
+    border-radius: 9px;
+    background: #f1f2f3;
+    padding: 0;
+    overflow: hidden;
+    flex: none;
+    transition: border-color .2s, transform .2s
+}
+
+.thumbnail:hover {
+    border-color: #74a48c;
+    transform: translateY(-2px)
+}
+
+.thumbnail.is-active {
+    border-color: var(--green)
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.main-image-wrap {
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 4/4.55;
+    border-radius: 12px;
+    background: #f1f1f1;
+    overflow: hidden;
+    display: grid;
+    place-items: center
+}
+
+.main-image-wrap>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    cursor: zoom-in;
+    transition: opacity .18s, transform .3s
+}
+
+.main-image-wrap:hover>img {
+    transform: scale(1.025)
+}
+
+.zoom-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 10px #0001
+}
+
+.zoom-button svg {
+    width: 20px
+}
+
+.zoom-button:hover {
+    background: var(--green);
+    color: white
+}
+
+.no-photo {
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+    padding: 25px
+}
+
+.product-info {
+    min-width: 0
+}
+
+.brand {
+    font-size: 13px;
+    color: #438268;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    margin: 0 0 12px
+}
+
+.product-info h1 {
+    font-size: clamp(25px, 2.4vw, 36px);
+    letter-spacing: -.035em;
+    line-height: 1.2;
+    margin: 0 0 9px
+}
+
+.subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 18px;
+    line-height: 1.5
+}
+
+.rating-row,
+.price-row,
+.quantity-row,
+.purchase-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.rating-row {
+    flex-wrap: wrap;
+    font-size: 13px;
+    margin-bottom: 24px
+}
+
+.stars {
+    color: #ffad00;
+    font-size: 20px;
+    letter-spacing: 1px
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.price-row {
+    flex-wrap: wrap;
+    margin-bottom: 4px
+}
+
+.current-price {
+    font-size: clamp(29px, 3vw, 40px);
+    color: var(--green);
+    letter-spacing: -.035em
+}
+
+.price-row del {
+    font-size: 20px;
+    color: #9199a7
+}
+
+.discount-pill {
+    background: #e8f7ed;
+    color: #09803d;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.tax-note {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 24px
+}
+
+.option-label {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 15px
+}
+
+.option-label span {
+    color: var(--muted);
+    font-weight: 500;
+    margin-left: 8px
+}
+
+.swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px
+}
+
+.swatch {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: var(--swatch);
+    border: 3px solid white;
+    outline: 1px solid #d8dde1;
+    transition: transform .2s, outline-color .2s, box-shadow .2s
+}
+
+.swatch:hover {
+    transform: scale(1.1)
+}
+
+.swatch.is-selected {
+    outline: 2px solid #138d50;
+    box-shadow: 0 0 0 4px #e8f5ec
+}
+
+.option-group {
+    margin-bottom: 29px
+}
+
+.quantity-section {
+    margin-bottom: 22px
+}
+
+.quantity-row {
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.quantity-control {
+    height: 48px;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    overflow: hidden
+}
+
+.quantity-control button {
+    width: 53px;
+    border: 0;
+    background: #f7f8fa;
+    font-size: 22px;
+    transition: background .2s, color .2s
+}
+
+.quantity-control button:hover:not(:disabled) {
+    background: var(--green);
+    color: white
+}
+
+.quantity-control button:disabled {
+    opacity: .4;
+    cursor: not-allowed
+}
+
+.quantity-control input {
+    width: 68px;
+    text-align: center;
+    border: 0;
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    outline: none;
+    font-weight: 700;
+    appearance: textfield
+}
+
+.quantity-control input::-webkit-inner-spin-button,
+.quantity-control input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.stock-message {
+    color: #11944d;
+    font-size: 13px;
+    font-weight: 600
+}
+
+.stock-message.out {
+    color: #b42318
+}
+
+.purchase-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.btn {
+    min-height: 57px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--green);
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background .22s, color .22s, transform .22s, box-shadow .22s;
+    text-align: center;
+    padding: 10px
+}
+
+.btn svg {
+    width: 21px;
+    height: 21px
+}
+
+.btn-outline {
+    color: var(--green);
+    background: #fff
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: #e7f4ed;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px #073f2c1c
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white
+}
+
+.btn-primary:hover:not(.is-disabled) {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px #073f2c40
+}
+
+.btn:disabled,
+.btn.is-disabled {
+    opacity: .5;
+    pointer-events: none;
+    cursor: not-allowed
+}
+
+.cart-feedback {
+    font-size: 13px;
+    min-height: 17px;
+    color: var(--green);
+    margin: 8px 0
+}
+
+.service-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fafbfc;
+    padding: 22px 18px;
+    margin-top: 15px
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0 14px
+}
+
+.service-item+.service-item {
+    border-left: 1px solid #d6dce2
+}
+
+.service-item svg {
+    width: 33px;
+    height: 33px;
+    flex: none;
+    color: var(--green)
+}
+
+.service-item strong {
+    font-size: 14px
+}
+
+.service-item p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 4px 0 0
+}
+
+.detail-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+    margin-top: 35px
+}
+
+.detail-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 25px;
+    min-width: 0
+}
+
+.detail-card h2 {
+    font-size: 22px;
+    letter-spacing: -.025em;
+    margin: 0 0 18px
+}
+
+.rich-text {
+    color: #525c6b;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere
+}
+
+.rich-text p:first-child {
+    margin-top: 0
+}
+
+.rich-text table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.rich-text td,
+.rich-text th {
+    padding: 8px;
+    border-bottom: 1px solid var(--line);
+    text-align: left
+}
+
+.rich-text ul,
+.rich-text ol {
+    padding-left: 20px
+}
+
+.rich-text img {
+    max-width: 100%;
+    height: auto
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(9, 16, 18, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 20px 25px
+}
+
+.lightbox[hidden] {
+    display: none
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px
+}
+
+.lightbox-close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 40px;
+    line-height: 1
+}
+
+.lightbox-close:hover {
+    color: #c7e7d4
+}
+
+:focus-visible {
+    outline: 3px solid #45aa77;
+    outline-offset: 3px
+}
+
+@media(max-width:1100px) {
+    .product-layout {
+        gap: 25px
+    }
+
+    .gallery {
+        grid-template-columns: 68px minmax(0, 1fr);
+        gap: 12px
+    }
+
+    .thumbnail {
+        width: 68px;
+        height: 79px
+    }
+
+    .service-panel {
+        padding: 18px 8px
+    }
+
+    .service-item {
+        gap: 8px;
+        padding: 0 9px
+    }
+
+    .service-item svg {
+        width: 27px;
+        height: 27px
+    }
+}
+
+@media(max-width:800px) {
+    .product-page {
+        width: min(100% - 32px, 650px);
+        padding-top: 18px
+    }
+
+    .product-layout {
+        grid-template-columns: 1fr;
+        gap: 27px
+    }
+
+    .gallery {
+        grid-template-columns: 75px minmax(0, 1fr)
+    }
+
+    .thumbnail {
+        width: 75px;
+        height: 85px
+    }
+
+    .main-image-wrap {
+        aspect-ratio: 4/3.8
+    }
+
+    .detail-panels {
+        grid-template-columns: 1fr
+    }
+
+    .product-info h1 {
+        font-size: 29px
+    }
+}
+
+@media(max-width:480px) {
+    .product-page {
+        width: calc(100% - 24px)
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+        gap: 8px;
+        margin-bottom: 17px
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px
+    }
+
+    .main-image-wrap {
+        width: 100%;
+        aspect-ratio: 1/1.05
+    }
+
+    .thumbnail-list {
+        flex-direction: row;
+        max-height: none;
+        overflow-x: auto;
+        padding: 3px 2px 7px
+    }
+
+    .thumbnail {
+        width: 67px;
+        height: 75px
+    }
+
+    .product-info h1 {
+        font-size: 25px
+    }
+
+    .subtitle {
+        font-size: 14px
+    }
+
+    .rating-row {
+        margin-bottom: 17px
+    }
+
+    .swatches {
+        gap: 12px
+    }
+
+    .swatch {
+        width: 38px;
+        height: 38px
+    }
+
+    .purchase-buttons {
+        gap: 9px
+    }
+
+    .btn {
+        font-size: 13px;
+        min-height: 52px;
+        gap: 6px
+    }
+
+    .btn svg {
+        width: 18px
+    }
+
+    .service-panel {
+        grid-template-columns: 1fr;
+        padding: 17px
+    }
+
+    .service-item {
+        padding: 8px 0
+    }
+
+    .service-item+.service-item {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 16px;
+        margin-top: 8px
+    }
+
+    .detail-panels {
+        gap: 14px;
+        margin-top: 22px
+    }
+
+    .detail-card {
+        padding: 19px
+    }
+
+    .detail-card h2 {
+        font-size: 20px
+    }
+
+    .quantity-row {
+        gap: 12px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important
+    }
+}
+
+
+
+
+.third_section{
+    width: 100%;
+    margin-top: 50px;
+
+}
+.title {
+    margin-left: 5%;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.display_item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Scroll container */
+.display-scroll {
+    width: 92%;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar (optional) */
+.display-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card */
+.product-card {
+    min-width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.product-card-image{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+.scroll-track-holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-track {
+    width: 80%;
+    height: 4px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 12px;
+    position: relative;
+}
+
+.scroll-fill {
+    height: 100%;
+    width: 0%;
+    background: rgb(139, 137, 137);
+    border-radius: 10px;
+    transition: width 0.1s linear;
+}
+
+  </style>
+</head>
+<body>
+<!-- Your existing header can be included above this main element. -->
+<main class="product-page" data-stock="{{ data.stock|default:0 }}">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a><span>/</span>
+    <span>{{ data.category.name|default:'data' }}</span><span>/</span>
+    <span aria-current="page">{{ data.name }}</span>
+  </nav>
+
+  <section class="product-layout" aria-label="Product overview">
+    <div class="gallery">
+      <div class="thumbnail-list" id="thumbnailList" aria-label="Product images">
+        {% for photo in data.images.all %}
+          <button class="thumbnail {% if forloop.first %}is-active{% endif %}" type="button" data-src="{{ photo.image.url }}" aria-label="View product image {{ forloop.counter }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+            <img src="{{ photo.image.url }}" alt="{{ product.name }} image {{ forloop.counter }}" loading="lazy">
+          </button>
+        {% empty %}
+          <div class="no-photo">No images available</div>
+        {% endfor %}
+      </div>
+      <div class="main-image-wrap">
+        {% with first_image=data.images.first %}
+          {% if first_image %}
+            <img id="mainProductImage" src="{{ first_image.image.url }}" alt="{{ product.name }}" title="Click to enlarge">
+            <button type="button" class="zoom-button" id="zoomButton" aria-label="Enlarge product image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5M8 10.8h5.6m-2.8-2.8v5.6"/></svg>
+            </button>
+          {% else %}
+            <div class="no-photo">Product photo coming soon</div>
+          {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p class="brand">{{ data.brand_name.name|default:'MIDSHOP' }}</p>
+      <h1>{{ data.name }}</h1>
+      <p class="subtitle">{{ data.title_name }}</p>
+      <div class="rating-row"><span class="stars" aria-label="Sample rating">★★★★★</span><strong>4.8</strong><span class="muted">(Sample rating — connect your reviews model)</span></div>
+      <div class="price-row">
+        {% if data.discount_price and data.discount_price < data.price %}
+          <strong class="current-price">₹{{ data.discount_price }}</strong>
+          <del>₹{{ data.price }}</del>
+          <span class="discount-pill" id="discountPill" data-price="{{ data.price }}" data-sale="{{ data.discount_price }}"></span>
+        {% else %}
+          <strong class="current-price">₹{{ data.price }}</strong>
+        {% endif %}
+      </div>
+      <p class="tax-note">Inclusive of all taxes</p>
+      
+        <div class="option-group">
+            <p class="option-label">
+                Select Color:
+                <span id="selectedColor">Select a color</span>
+            </p>
+        
+            <div class="swatches" id="colorSwatches" role="group"
+                 aria-label="Choose available color">
+        
+                {% for variant in variants %}
+                    <button
+                        class="swatch {% if forloop.first %}is-selected{% endif %}"
+                        type="button"
+                        data-color="{{ variant.color }}"
+                        data-variant-id="{{ variant.id }}"
+                        style="--swatch: {{ variant.color_code|default:'#cccccc' }}"
+                        title="{{ variant.color }}"
+                        aria-label="{{ variant.color }}"
+                        aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+                    </button>
+                {% empty %}
+                    <p>No colors currently available.</p>
+                {% endfor %}
+                
+            </div>
+        </div>
+
+      <div class="quantity-section">
+        <label class="option-label" for="quantity">Quantity:</label>
+        <div class="quantity-row">
+          <div class="quantity-control">
+            <button type="button" id="decreaseQty" aria-label="Decrease quantity">−</button>
+            <input type="number" id="quantity" name="quantity" min="1" max="{{ data.stock|default:0 }}" value="1" inputmode="numeric" aria-label="Quantity">
+            <button type="button" id="increaseQty" aria-label="Increase quantity">+</button>
+          </div>
+          <span class="stock-message" id="stockMessage" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="purchase-buttons">
+        <button class="btn btn-outline" type="button" id="addToCart" onclick="event.preventDefault(); event.stopPropagation(); addToCart({{ data.id }})">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l3 13h12l3-10H5"/></svg>Add to Cart
+        </button>
+        <a class="btn btn-primary {% if not data.stock %}is-disabled{% endif %}" id="buyNow" href="{% url 'buy_now' data.id %}?quantity=1" {% if not data.stock %}aria-disabled="true" tabindex="-1"{% endif %}>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="m13 2-9 12h7l-1 8 10-13h-7z"/>
+            </svg>
+            Buy Now
+        </a>
+      </div>
+      <p id="cartFeedback" class="cart-feedback" role="status" aria-live="polite"></p>
+      <div class="service-panel">
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 5h11v12H3zM14 9h4l3 4v4h-7z"/><circle cx="7.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>
+          <div><strong>Fast Delivery</strong><p>Delivery estimates shown at checkout</p><p>Shipping calculated at checkout</p></div>
+        </div>
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/><path d="M16 3.9 7 9"/></svg>
+          <div><strong>Easy Returns</strong><p>See your store's return policy</p><p>Eligibility varies by product</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-panels" aria-label="Product information">
+    <article class="detail-card"><h2>General Detail</h2><div class="rich-text">{{ data.General.html|safe }}</div></article>
+    <article class="detail-card"><h2>Product Details</h2><div class="rich-text">{{ data.Product_details.html|safe }}</div></article>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged product image" hidden>
+  <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close image preview">×</button>
+  <img id="lightboxImage" alt="Enlarged product image">
+</div>
+
+<div class="third_section">
+    <h2 class="title">Today's Best Deals For You!</h2>
+    <div class="display_item">
+        <div class="display-scroll" id="productScroll">
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-image">
+                    <img src="" alt="">
+                    <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M23.6 0c-3.1 0-5.4 1.9-7.6 4.1C13.8 1.9 11.5 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.3 16 21.2 16 21.2s16-11.9 16-21.2C32 3.8 28.2 0 23.6 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>HomePod mini</h4>
+                    <p class="price">₹99.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="scroll-track-holder">
+        <div class="scroll-track">
+            <div class="scroll-fill" id="scroll-fill"></div>
+        </div>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('mainProductImage');
+  const thumbs = [...document.querySelectorAll('.thumbnail[data-src]')];
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const closeLightbox = document.getElementById('closeLightbox');
+  let previousFocus = null;
+
+  thumbs.forEach(thumb => thumb.addEventListener('click', () => {
+    if (!mainImage) return;
+    mainImage.src = thumb.dataset.src;
+    mainImage.alt = thumb.querySelector('img')?.alt || 'Product image';
+    thumbs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-pressed', 'false'); });
+    thumb.classList.add('is-active');
+    thumb.setAttribute('aria-pressed', 'true');
+  }));
+
+  function openPreview() {
+    if (!mainImage || !lightbox) return;
+    previousFocus = document.activeElement;
+    lightboxImage.src = mainImage.src;
+    lightboxImage.alt = mainImage.alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeLightbox.focus();
+  }
+  function closePreview() {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    previousFocus?.focus();
+  }
+  mainImage?.addEventListener('click', openPreview);
+  document.getElementById('zoomButton')?.addEventListener('click', openPreview);
+  closeLightbox?.addEventListener('click', closePreview);
+  lightbox?.addEventListener('click', e => { if (e.target === lightbox) closePreview(); });
+  document.addEventListener('keydown', e => {
+    if (lightbox?.hidden === false) {
+      if (e.key === 'Escape') closePreview();
+      if (e.key === 'Tab') { e.preventDefault(); closeLightbox.focus(); }
+    }
+  });
+
+ 
+const swatches = document.querySelectorAll(".swatch");
+const selectedColor = document.getElementById("selectedColor");
+
+let selectedVariantId = null;
+
+function selectColor(swatch) {
+    swatches.forEach(function (item) {
+        item.classList.remove("is-selected");
+        item.setAttribute("aria-pressed", "false");
+    });
+
+    swatch.classList.add("is-selected");
+    swatch.setAttribute("aria-pressed", "true");
+
+    selectedColor.textContent = swatch.dataset.color;
+    selectedVariantId = swatch.dataset.variantId || null;
+}
+
+// Select the first available backend color
+const firstSwatch = document.querySelector(".swatch");
+
+if (firstSwatch) {
+    selectColor(firstSwatch);
+} else {
+    selectedColor.textContent = "No colors available";
+}
+
+// Allow users to change colors
+swatches.forEach(function (swatch) {
+    swatch.addEventListener("click", function () {
+        selectColor(swatch);
+    });
+});
+
+ 
+  const discount = document.getElementById('discountPill');
+  if (discount) {
+    const original = Number(discount.dataset.price);
+    const sale = Number(discount.dataset.sale);
+    if (original > 0 && sale < original) discount.textContent = `${Math.round((original - sale) / original * 100)}% OFF`;
+    else discount.hidden = true;
+  }
+
+  // Set data-api-url on #addToCart to your real DRF endpoint.
+  // This example expects token/session authentication to be configured server-side.
+  
+});
+function getCookie(name) {
+    let cookieValue = null;
+
+    if (document.cookie && document.cookie !== '') {
+
+        const cookies = document.cookie.split(';');
+
+        for (let cookie of cookies) {
+
+            cookie = cookie.trim();
+
+            if (cookie.startsWith(name + '=')) {
+
+                cookieValue = decodeURIComponent(
+                    cookie.substring(name.length + 1)
+                );
+
+                break;
+            }
+        }
+    }
+
+    return cookieValue;
+}
+    
+ 
+async function addToCart(productId) {
+    const quantityInput = document.getElementById("quantity");
+    const feedback = document.getElementById("cartFeedback");
+
+    const quantity = Number.parseInt(quantityInput?.value, 10);
+
+    if (!Number.isInteger(quantity) || quantity < 1) {
+        if (feedback) feedback.textContent = "Please select a valid quantity.";
+        return;
+    }
+
+    try {
+        const response = await fetch("/add-cart/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": getCookie("csrftoken")
+            },
+            credentials: "same-origin",
+            body: JSON.stringify({
+                product_id: productId,
+                quantity: quantity
+            })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(
+                data.error || data.detail || `Request failed: ${response.status}`
+            );
+        }
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        if (feedback) {
+            feedback.textContent = data.message || "Product added to cart!";
+        } else {
+            alert(data.message || "Product added to cart!");
+        }
+
+    } catch (error) {
+        console.error("Add to Cart error:", error);
+
+        if (feedback) {
+            feedback.textContent = error.message;
+        } else {
+            alert(error.message);
+        }
+    }
+}
+
+    
+/* ===== PRODUCT QUANTITY AND STOCK ===== */
+
+const productPage = document.querySelector(".product-page");
+const quantityInput = document.getElementById("quantity");
+const decreaseButton = document.getElementById("decreaseQty");
+const increaseButton = document.getElementById("increaseQty");
+const stockMessage = document.getElementById("stockMessage");
+const buyNowButton = document.getElementById("buyNow");
+
+const availableStock = Number(productPage.dataset.stock) || 0;
+
+function updateQuantity() {
+    let quantity = parseInt(quantityInput.value, 10);
+
+    if (isNaN(quantity)) {
+        quantity = 1;
+    }
+
+    if (availableStock === 0) {
+        quantity = 0;
+    } else {
+        quantity = Math.max(1, Math.min(quantity, availableStock));
+    }
+
+    quantityInput.value = quantity;
+
+    // Disable buttons when the limit is reached
+    decreaseButton.disabled = quantity <= 1;
+    increaseButton.disabled =
+        availableStock === 0 || quantity >= availableStock;
+
+    quantityInput.disabled = availableStock === 0;
+
+    // Display available stock
+    if (availableStock > 0) {
+        stockMessage.textContent =
+            availableStock + " items available in stock";
+    } else {
+        stockMessage.textContent = "Out of stock";
+    }
+
+    // Update Buy Now quantity
+    if (buyNowButton) {
+        if (availableStock === 0) {
+            buyNowButton.classList.add("is-disabled");
+            buyNowButton.setAttribute("aria-disabled", "true");
+            buyNowButton.setAttribute("tabindex", "-1");
+        } else {
+            buyNowButton.classList.remove("is-disabled");
+            buyNowButton.removeAttribute("aria-disabled");
+            buyNowButton.removeAttribute("tabindex");
+
+            const url = new URL(
+                buyNowButton.href,
+                window.location.href
+            );
+
+            url.searchParams.set("quantity", quantity);
+
+            buyNowButton.href = url.toString();
+        }
+    }
+}
+
+// Decrease quantity
+decreaseButton.addEventListener("click", function () {
+    quantityInput.value = Number(quantityInput.value) - 1;
+    updateQuantity();
+});
+
+// Increase quantity
+increaseButton.addEventListener("click", function () {
+    quantityInput.value = Number(quantityInput.value) + 1;
+    updateQuantity();
+});
+
+// Handle manual quantity input
+quantityInput.addEventListener("input", updateQuantity);
+quantityInput.addEventListener("change", updateQuantity);
+
+// Run when the page loads
+updateQuantity();
+
+/* ===== END PRODUCT QUANTITY ===== */
+
+
+
+ const container = document.getElementById("productScroll");
+const fill = document.getElementById("scroll-fill");
+
+function updateProgress() {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    if (maxScroll <= 0) {
+        fill.style.width = "100%";
+        return;
+    }
+
+    const percent = (container.scrollLeft / maxScroll) * 100;
+    fill.style.width = percent + "%";
+}
+
+container.addEventListener("scroll", updateProgress);
+window.addEventListener("load", updateProgress);
+
+
+
+</script>

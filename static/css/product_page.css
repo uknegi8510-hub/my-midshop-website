@@ -157,8 +157,15 @@
     gap: 7%;
     margin-top: 30px;
 }
-.buy_now{
+.button-box a{
+    text-decoration: none;
+    color: inherit;
     width: 25%;
+    display: block;
+
+}
+.buy_now{
+    width: 100%;
     border:1px solid var(--primary-color);
     height: 40px;
     border-radius: 20px;

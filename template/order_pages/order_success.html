@@ -1,0 +1,515 @@
+
+{% include 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful | Midshop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f8f5;
+            color: #252525;
+            min-height: 100vh;
+        }
+
+        .topbar {
+            height: 70px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            box-shadow: 0 2px 12px rgba(0,0,0,.05);
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            color: #228b22;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #252525;
+        }
+
+        .secure {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .page {
+            max-width: 850px;
+            margin: 45px auto;
+            padding: 0 18px;
+        }
+
+        .success-card {
+            background: white;
+            border-radius: 20px;
+            padding: 42px 35px;
+            text-align: center;
+            box-shadow: 0 12px 45px rgba(20,70,20,.07);
+            animation: cardEnter .7s ease both;
+        }
+
+        @keyframes cardEnter {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .check-circle {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            background: #e9f8e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 23px;
+            animation: pop .65s cubic-bezier(.2,1.5,.5,1) .2s both;
+        }
+
+        @keyframes pop {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .check-circle svg {
+            width: 58px;
+            height: 58px;
+            stroke: #228b22;
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .check-path {
+            stroke-dasharray: 55;
+            stroke-dashoffset: 55;
+            animation: drawCheck .65s ease .75s forwards;
+        }
+
+        @keyframes drawCheck {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .success-card h1 {
+            font-size: 31px;
+            margin-bottom: 12px;
+            color: #1e3c22;
+        }
+
+        .success-message {
+            color: #777;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .order-number {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #f0f8f0;
+            border: 1px dashed #8fc58f;
+            border-radius: 9px;
+            color: #228b22;
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        .details {
+            margin-top: 35px;
+            border: 1px solid #edf0ed;
+            border-radius: 13px;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .details-heading {
+            padding: 17px 20px;
+            background: #f8faf8;
+            border-bottom: 1px solid #edf0ed;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #777;
+        }
+
+        .detail-value {
+            font-weight: 600;
+            text-align: right;
+            overflow-wrap: anywhere;
+        }
+
+        .paid {
+            color: #228b22;
+        }
+
+        .items {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .items h3 {
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 13px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product img {
+            width: 65px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 9px;
+            background: #f4f4f4;
+        }
+
+        .product-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .product-info h4 {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .product-info p {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .product-price {
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .address-box {
+            margin-top: 27px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f8faf8;
+            text-align: left;
+        }
+
+        .address-box h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .address-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 13px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .primary {
+            background: #228b22;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #176e17;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(34,139,34,.2);
+        }
+
+        .secondary {
+            color: #228b22;
+            border: 1px solid #228b22;
+            background: white;
+        }
+
+        .secondary:hover {
+            background: #f0f8f0;
+            transform: translateY(-3px);
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            color: #999;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .confetti {
+            position: fixed;
+            top: -15px;
+            width: 9px;
+            height: 13px;
+            pointer-events: none;
+            z-index: 100;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .topbar {
+                padding: 0 18px;
+                height: 62px;
+            }
+
+            .logo { font-size: 23px; }
+
+            .secure { font-size: 11px; }
+
+            .page { margin: 22px auto; }
+
+            .success-card {
+                padding: 32px 17px;
+                border-radius: 15px;
+            }
+
+            .success-card h1 { font-size: 25px; }
+
+            .check-circle {
+                width: 85px;
+                height: 85px;
+            }
+
+            .check-circle svg {
+                width: 47px;
+                height: 47px;
+            }
+
+            .detail-row {
+                padding: 13px;
+                font-size: 13px;
+            }
+
+            .product img {
+                width: 55px;
+                height: 62px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">MID<span>SHOP</span></div>
+    <div class="secure">🔒 Secure Order Confirmation</div>
+</header>
+
+<main class="page">
+
+    <section class="success-card">
+
+        <div class="check-circle">
+            <svg viewBox="0 0 60 60">
+                <path class="check-path" d="M14 31 L25 42 L47 19"/>
+            </svg>
+        </div>
+
+        <h1>Order Placed Successfully!</h1>
+
+        <p class="success-message">
+            Thank you for shopping with Midshop.
+            {% if payment.payment_method == 'cod' %}
+                Your order has been confirmed. Pay when your order arrives.
+            {% else %}
+                Your payment has been completed successfully.
+            {% endif %}
+            We are getting your order ready.
+        </p>
+
+        <div class="order-number">
+            Order ID: {{ order.order_number }}
+        </div>
+
+        <div class="details">
+
+            <div class="details-heading">Order Information</div>
+
+            <div class="detail-row">
+                <span class="detail-label">Order Date</span>
+                <span class="detail-value">
+                    {{ order.created_at|date:"d M Y, h:i A" }}
+                </span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Order Status</span>
+                <span class="detail-value paid">
+                    {{ order.get_status_display }}
+                </span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Payment Method</span>
+                <span class="detail-value">
+                    {{ payment.get_payment_method_display }}
+                </span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Payment Status</span>
+                <span class="detail-value paid">
+                    {{ payment.get_status_display }}
+                </span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Total Amount</span>
+                <span class="detail-value">
+                    ₹{{ order.total_amount|floatformat:2 }}
+                </span>
+            </div>
+
+        </div>
+
+        <div class="items">
+            <h3>Ordered Products</h3>
+
+            {% for item in order_items %}
+                <div class="product">
+
+                    {% if item.product.image %}
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product_name }}">
+                    {% else %}
+                        <img src="{% static 'images/default-product.png' %}" alt="Product">
+                    {% endif %}
+
+                    <div class="product-info">
+                        <h4>{{ item.product_name }}</h4>
+                        <p>Quantity: {{ item.quantity }}</p>
+                    </div>
+
+                    <div class="product-price">
+                        ₹{{ item.subtotal|floatformat:2 }}
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="address-box">
+            <h3>📍 Delivery Address</h3>
+            <p>
+                <strong>{{ shipping_address.full_name }}</strong><br>
+                {{ shipping_address.address_line }}<br>
+                {{ shipping_address.city }},
+                {{ shipping_address.state }} -
+                {{ shipping_address.pincode }}<br>
+                {{ shipping_address.country }}<br>
+                Phone: {{ shipping_address.phone }}
+            </p>
+        </div>
+
+        <div class="actions">
+            <a href="/" class="btn primary">Continue Shopping →</a>
+        </div>
+
+        <p class="footer-note">
+            Thank you for choosing Midshop!<br>
+            We hope to see you again soon.
+        </p>
+
+    </section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Celebration confetti animation
+    const colors = ["#228b22", "#f5c542", "#ff7043", "#42a5f5", "#ec407a"];
+
+    for (let i = 0; i < 75; i++) {
+
+        const piece = document.createElement("span");
+
+        piece.className = "confetti";
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.animationDuration =
+            (Math.random() * 2 + 2) + "s";
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(function () {
+            piece.remove();
+        }, 5000);
+    }
+
+});
+</script>
+
+</body>
+</html>
+

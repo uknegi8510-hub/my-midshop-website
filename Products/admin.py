@@ -24,7 +24,6 @@ class ProductAdmin(admin.ModelAdmin):
         "discount_price",
         'stock',
         'is_available',
-
     )
 class BrandAdmin(admin.ModelAdmin):
     list_display=('logo','name','is_active')

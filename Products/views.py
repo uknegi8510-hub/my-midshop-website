@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from Products.models import Product, Category, Brand
+from Products.models import Product, Category, Brand,ProductVariant
 
 
 def home(request):
@@ -22,6 +22,10 @@ def product_page(request, slug):
         slug=slug,
         is_available=True
     )
+    variants = ProductVariant.objects.filter(
+        product=product_id,
+        stock__gt=0
+    )
 
     related_product = Product.objects.filter(
         category=product_id.category,
@@ -32,10 +36,11 @@ def product_page(request, slug):
 
     context = {
         "data": product_id,
-        "related_product": related_product
+        "related_product": related_product,
+        'variants':variants
     }
 
-    return render(request, 'product_page.html', context)
+    return render(request, 'product-page.html', context)
 
 
 # Category products

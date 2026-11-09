@@ -1,0 +1,883 @@
+
+{% load static %}
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary | Midshop</title>
+
+    <style>
+        :root {
+            --primary: #228b22;
+            --primary-dark: #176b17;
+            --primary-light: #edf7ed;
+            --background: #f7f8f6;
+            --white: #fff;
+            --text: #252a25;
+            --muted: #747a74;
+            --border: #e4e9e2;
+            --danger: #d64545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, input {
+            font: inherit;
+        }
+
+        .summary-container {
+            width: min(1150px, 92%);
+            margin: 35px auto 60px;
+        }
+
+        .page-heading {
+            margin-bottom: 25px;
+        }
+
+        .page-heading h1 {
+            font-size: clamp(25px, 4vw, 33px);
+            font-weight: 750;
+            letter-spacing: -0.6px;
+        }
+
+        .page-heading p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* Progress */
+
+        .progress-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 38px;
+        }
+
+        .progress-step {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .progress-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--white);
+            display: grid;
+            place-items: center;
+        }
+
+        .progress-step.done,
+        .progress-step.active {
+            color: var(--primary-dark);
+        }
+
+        .progress-step.done .progress-circle,
+        .progress-step.active .progress-circle {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .progress-line {
+            height: 2px;
+            width: clamp(28px, 8vw, 95px);
+            background: var(--border);
+            margin: 0 14px;
+        }
+
+        .progress-line.done {
+            background: var(--primary);
+        }
+
+        /* Main layout */
+
+        .summary-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(285px, .85fr);
+            gap: 25px;
+            align-items: start;
+        }
+
+        .left-content,
+        .right-content {
+            display: grid;
+            gap: 22px;
+            min-width: 0;
+        }
+
+        .summary-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            padding: 24px;
+            box-shadow: 0 4px 18px rgba(30, 60, 30, .035);
+            min-width: 0;
+        }
+
+        .card-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 21px;
+        }
+
+        .heading-left {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            min-width: 0;
+        }
+
+        .heading-left h2,
+        .card-heading h2 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .section-icon {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+            background: var(--primary-light);
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .section-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .edit-link {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .edit-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Address */
+
+        .address-box {
+            display: flex;
+            gap: 13px;
+            padding: 17px;
+            border: 1px solid #cfe5ce;
+            background: #f7fbf6;
+            border-radius: 10px;
+        }
+
+        .address-marker {
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .address-name {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .address-type {
+            display: inline-block;
+            padding: 2px 8px;
+            margin-left: 5px;
+            border-radius: 5px;
+            background: #e3f2e1;
+            color: var(--primary-dark);
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .address-text {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        /* Products */
+
+        .items-count {
+            color: var(--muted);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .product-item {
+            display: grid;
+            grid-template-columns: 80px minmax(0, 1fr) auto;
+            gap: 15px;
+            align-items: start;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .product-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .product-item:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .product-image {
+            width: 80px;
+            height: 90px;
+            border-radius: 9px;
+            background: var(--primary-light);
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .image-placeholder {
+            color: var(--primary);
+        }
+
+        .image-placeholder svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .product-description {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .product-quantity {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 9px;
+            padding: 3px 9px;
+            border-radius: 5px;
+            background: #f2f4f1;
+            color: #555d55;
+            font-size: 12px;
+        }
+
+        .product-price {
+            text-align: right;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .product-price small {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        /* Payment */
+
+        .payment-box {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .payment-symbol {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 9px;
+            flex-shrink: 0;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .payment-title {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .payment-description {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .payment-status {
+            margin-left: auto;
+            color: var(--primary-dark);
+            background: var(--primary-light);
+            padding: 4px 9px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* Price details */
+
+        .price-card {
+            position: sticky;
+            top: 20px;
+        }
+
+        .order-number {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--muted);
+            padding: 12px;
+            border-radius: 8px;
+            background: #f7f8f6;
+            margin-bottom: 21px;
+        }
+
+        .order-number strong {
+            color: var(--text);
+            overflow-wrap: anywhere;
+            text-align: right;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 15px 0;
+            color: #686f68;
+            font-size: 14px;
+        }
+
+        .price-row strong {
+            color: var(--text);
+            font-weight: 600;
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .discount-value,
+        .shipping-free {
+            color: var(--primary) !important;
+        }
+
+        .price-divider {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 19px 0;
+        }
+
+        .total-row {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .total-row strong {
+            font-size: 23px;
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .savings-box {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px;
+            border: 1px dashed #b9dcb6;
+            border-radius: 8px;
+            background: #f5fbf3;
+            color: var(--primary-dark);
+            font-size: 12px;
+            margin: 19px 0;
+        }
+
+        /* Buttons */
+
+        .primary-button,
+        .secondary-button {
+            width: 100%;
+            min-height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .2s, transform .2s, box-shadow .2s;
+        }
+
+        .primary-button {
+            border: 1px solid var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .primary-button:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 13px rgba(34, 139, 34, .18);
+        }
+
+        .secondary-button {
+            margin-top: 11px;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--text);
+        }
+
+        .secondary-button:hover {
+            border-color: var(--primary);
+            color: var(--primary-dark);
+            background: var(--primary-light);
+        }
+
+        .secure-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            margin-top: 17px;
+            color: var(--muted);
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 850px) {
+            .summary-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .right-content {
+                order: 0;
+            }
+
+            .left-content {
+                order: 1;
+            }
+
+            .price-card {
+                position: static;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .summary-container {
+                width: 94%;
+                margin-top: 22px;
+            }
+
+            .summary-card {
+                padding: 17px;
+                border-radius: 10px;
+            }
+
+            .progress-section {
+                margin: 24px 0;
+            }
+
+            .progress-step {
+                flex-direction: column;
+                gap: 5px;
+                font-size: 10px;
+            }
+
+            .progress-circle {
+                width: 32px;
+                height: 32px;
+            }
+
+            .progress-line {
+                width: 30px;
+                margin: 0 7px;
+                align-self: flex-start;
+                margin-top: 15px;
+            }
+
+            .heading-left h2,
+            .card-heading h2 {
+                font-size: 16px;
+            }
+
+            .product-item {
+                grid-template-columns: 60px minmax(0, 1fr);
+                gap: 11px;
+            }
+
+            .product-image {
+                width: 60px;
+                height: 70px;
+            }
+
+            .product-price {
+                grid-column: 2;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 9px;
+            }
+
+            .product-price small {
+                margin-top: 0;
+            }
+
+            .payment-box {
+                padding: 12px;
+                gap: 9px;
+            }
+
+            .payment-status {
+                font-size: 10px;
+                padding: 4px 6px;
+            }
+
+            .page-heading h1 {
+                font-size: 26px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="summary-container">
+
+    <header class="page-heading">
+        <h1>Order Summary</h1>
+        <p>Review your items, delivery address and total before placing your order.</p>
+    </header>
+
+    <!-- Progress steps -->
+    <section class="progress-section" aria-label="Checkout progress">
+        <div class="progress-step done">
+            <span class="progress-circle">✓</span><br>
+            <span>Address</span>
+        </div>
+
+        <span class="progress-line done"></span>
+
+        <div class="progress-step active">
+            <span class="progress-circle">2</span><br>
+            <span>Order Summary</span>
+        </div>
+
+        <span class="progress-line"></span>
+
+        <div class="progress-step">
+            <span class="progress-circle">3</span><br>
+            <span>Payment</span>
+        </div>
+    </section>
+
+    <div class="summary-layout">
+
+        <!-- Left side -->
+        <div class="left-content">
+
+            <!-- Delivery address -->
+            <section class="summary-card">
+                <div class="card-heading">
+                    <div class="heading-left">
+                        <span class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.8">
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="2.5"/>
+                            </svg>
+                        </span>
+                        <h2>Delivery Address</h2>
+                    </div>
+
+                    <a class="edit-link"
+                       href="{% url 'checkout_address' order.id %}">
+                        Change
+                    </a>
+                </div>
+
+                {% if shipping_address %}
+                    <div class="address-details">
+                        <strong>{{ shipping_address.full_name }}</strong>
+                        <div>{{ shipping_address.phone }}</div>
+                        <div>{{ shipping_address.address_line }}</div>
+                        <div>
+                            {{ shipping_address.city }},
+                            {{ shipping_address.state }}
+                            - {{ shipping_address.pincode }}
+                        </div>
+                        <div>{{ shipping_address.country }}</div>
+                    </div>
+                {% else %}
+                    <p>No shipping address has been selected.</p>
+                {% endif %}
+            </section>
+
+            <!-- Order items -->
+            <section class="summary-card">
+                <div class="card-heading">
+                    <div class="heading-left">
+                        <span class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.8">
+                                <path d="M6 7h12l1 14H5L6 7Z"/>
+                                <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+                            </svg>
+                        </span>
+                        <h2>Items in Your Order</h2>
+                    </div>
+
+                    <span class="items-count">
+                        {{ order_items|length }} item{{ order_items|length|pluralize }}
+                    </span>
+                </div>
+
+                {% for item in order_items %}
+                    <article class="product-item">
+
+                        <div class="product-image">
+                            {% if item.product.image %}
+                                <img src="{{ item.product.image.url }}"
+                                     alt="{{ item.product_name }}">
+                            {% else %}
+                                <span class="image-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                         stroke="currentColor" stroke-width="1.5">
+                                        <path d="M7 4 4 7l3 3v10h10V10l3-3-3-3-4 2h-2L7 4Z"/>
+                                        <path d="M9 4c0 2 1 3 3 3s3-1 3-3"/>
+                                    </svg>
+                                </span>
+                            {% endif %}
+                        </div>
+
+                        <div>
+                            <h3 class="product-name">
+                                {{ item.product_name }}
+                            </h3>
+
+                            <p class="product-description">
+                                Order item
+                            </p>
+
+                            <span class="product-quantity">
+                                Qty: {{ item.quantity }}
+                            </span>
+                        </div>
+
+                        <div class="product-price">
+                            ₹{{ item.subtotal|floatformat:2 }}
+                            <small>
+                                ₹{{ item.price|floatformat:2 }} each
+                            </small>
+                        </div>
+
+                    </article>
+                {% empty %}
+                    <p class="product-description">
+                        No items found for this order.
+                    </p>
+                {% endfor %}
+            </section>
+
+            <!-- Payment information -->
+            <!-- <section class="summary-card">
+                <div class="card-heading">
+                    <div class="heading-left">
+                        <span class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.8">
+                                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                                <path d="M3 10h18M7 15h4"/>
+                            </svg>
+                        </span>
+                        <h2>Payment Information</h2>
+                    </div>
+                </div>
+
+                <div class="payment-box">
+                    <div class="payment-symbol">COD</div>
+
+                    <div>
+                        <p class="payment-title">Cash on Delivery</p>
+                        <p class="payment-description">
+                            Pay when your order is delivered.
+                        </p>
+                    </div>
+
+                    <span class="payment-status">Available</span>
+                </div>
+            </section> -->
+
+        </div>
+
+        <!-- Right side: Price summary -->
+        <aside class="right-content">
+            <section class="summary-card price-card">
+
+                <div class="card-heading">
+                    <h2>Price Details</h2>
+                </div>
+
+                <div class="order-number">
+                    <span>Order Number</span>
+                    <strong>{{ order.order_number }}</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <strong>₹{{ subtotal|floatformat:2 }}</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>Discount</span>
+                    <strong class="discount-value">
+                        − ₹{{ discount|floatformat:2 }}
+                    </strong>
+                </div>
+
+                <div class="price-row">
+                    <span>Delivery Charges</span>
+                    <strong class="{% if shipping_charge == 0 %}shipping-free{% endif %}">
+                        {% if shipping_charge == 0 %}
+                            FREE
+                        {% else %}
+                            ₹{{ shipping_charge|floatformat:2 }}
+                        {% endif %}
+                    </strong>
+                </div>
+
+                <hr class="price-divider">
+
+                <div class="price-row total-row">
+                    <span>Total Amount</span>
+                    <strong>₹{{ total|floatformat:2 }}</strong>
+                </div>
+
+                <div class="savings-box">
+                    <span aria-hidden="true">✓</span>
+                    You save ₹{{ discount|floatformat:2 }} on this order!
+                </div>
+
+                {% if shipping_address and order_items %}
+                    <form method="post" action="" id="placeOrderForm">
+                        {% csrf_token %}
+
+                        <button class="primary-button" type="submit">
+                            <a href="{% url 'order_payment' order.id %}">
+                                Place Order
+                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor"
+                                     stroke-width="2">
+                                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                                </svg>
+
+                            </a>
+                        </button>
+                    </form>
+                {% else %}
+                    <button class="primary-button" type="button" disabled
+                            style="opacity:.55;cursor:not-allowed">
+                        Place Order
+                    </button>
+                {% endif %}
+
+                <a href="{% url 'checkout_address' order.id %}"
+                   class="secondary-button">
+                    ← Back to Address
+                </a>
+
+                <div class="secure-message">
+                    <svg width="16" height="16" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="5" y="10" width="14" height="11" rx="2"/>
+                        <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+                    </svg>
+                    Secure checkout with Midshop
+                </div>
+
+            </section>
+        </aside>
+
+    </div>
+
+    <footer class="footer-text">
+        Thank you for shopping with Midshop.
+    </footer>
+
+</main>
+
+</body>
+</html>
+    

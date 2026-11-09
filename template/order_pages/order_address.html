@@ -1,0 +1,424 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Address | MIDSHOP</title>
+    <link rel="stylesheet" href="{% static 'css/order_page/order_address.css' %}">
+</head>
+
+<body>
+{% include 'header.html' %}
+
+<main class="checkout-page">
+    <!-- Checkout progress -->
+    <section class="progress-card" aria-label="Checkout progress">
+        <div class="progress-container">
+            <div class="step {% if step > 1 %}completed{% elif step == 1 %}active{% endif %}">
+                <div class="circle">1</div>
+                <p>Address</p>
+            </div>
+            
+            <div class="progress-line {% if step > 1 %}active{% endif %}"></div>
+            
+            <div class="step {% if step > 2 %}completed{% elif step == 2 %}active{% endif %}">
+                <div class="circle">2</div>
+                <p>Order Summary</p>
+            </div>
+            
+            <div class="progress-line {% if step > 2 %}active{% endif %}"></div>
+            
+            <div class="step {% if step == 3 %}active{% endif %}">
+                <div class="circle">3</div>
+                <p>Payment</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="checkout-layout">
+        
+        <!-- Delivery address -->
+        <section class="panel address-panel">
+        <!-- <form method="POST" action="{% url 'save_order_address' order.id %}"> -->
+            <div class="section-heading">
+                <h1>Select Delivery Address</h1>
+
+                <button
+                    type="button"
+                    class="button button-outline add-address-button"
+                    id="openAddressModal">
+                    + Add New Address
+                </button>
+            </div>
+
+            <p class="subheading">
+                Choose where you want your MIDSHOP order delivered.
+            </p>
+
+            <div class="address-list" id="addressList">
+                <form id="shippinaddress" method="POST" action="{% url 'checkout_address' order.id %}">
+                    {% csrf_token %}
+                    {% for address in addresses %}
+                    <article class="address-card {% if address.is_default and forloop.first %}selected{% endif %}">
+                    <input type="radio" class="address-radio" name="selected_address" value="{{ address.id }}" id="address-{{ address.id }}" {% if address.is_default and forloop.first %}checked{% endif %} aria-label="Select address for {{ address.full_name }}">
+                    <div class="address-info">
+                        <div class="address-top">
+                            <h3 class="address-name">{{ address.full_name }}</h3>
+                            <span class="address-type">{{ address.address_type|default:"Home" }}</span>
+                        </div>
+                        
+                        <p class="address-phone">Phone: {{ address.phone }}</p>
+                        <p class="address-text">
+                            {{ address.address_line }},
+                            {{ address.city }},
+                            {{ address.state }} - {{ address.pincode }},
+                            {{ address.country }}
+                        </p>
+                        
+                        
+                        {% if address.is_default %}
+                        <span class="default-label">✓ Default Address</span>
+                        {% endif %}
+                        
+                    </div>
+                </article>
+                {% empty %}
+                <div class="empty-state" id="emptyAddressState">
+                    <h3>No saved addresses yet</h3>
+                    <p>Add your delivery address to continue with checkout.</p>
+                    <button type="button" class="button button-primary" id="emptyAddAddress"> + Add Your First Address
+                    </button>
+                </div>
+                {% endfor %}
+                
+            </div>
+            
+            <p id="addressFeedback" class="form-message" role="status" aria-live="polite"></p>
+        </section>
+        
+        <!-- Price summary -->
+        <aside class="panel price-panel">
+            <h2>Price Details</h2>
+            <p class="price-caption">{{ cart_items|length }} item(s) in your order</p>
+            
+            <div class="price-row">
+                <span>Product Price</span>
+                <span>₹{{ subtotal|floatformat:2 }}</span>
+            </div>
+            
+            <div class="price-row discount-row">
+                <span>Total Discounts</span>
+                <span>- ₹{{ discount|floatformat:2 }}</span>
+            </div>
+            
+            <div class="price-row">
+                <span>Shipping</span>
+                <span class="{% if totals.shipping == 0 %}shipping-free{% endif %}">
+                    {% if totals.shipping == 0 %}FREE{% else %}₹{{ shipping|floatformat:2 }}{% endif %}
+                </span>
+            </div>
+            
+            <hr class="price-divider">
+            
+            <div class="price-row total-row">
+                <span>Order Total</span>
+                <span>₹{{ total|floatformat:2 }}</span>
+            </div>
+            
+            <div class="discount-box">
+                <span class="discount-icon" aria-hidden="true">✓</span>
+                <span>
+                    You save ₹{{discount|default:0 |floatformat:2 }} on this order.
+                </span>
+            </div>
+            
+            <p class="secure-note">Your delivery details will be used to fulfil your order.</p>
+            <button type="submit" onclick="submitForm()" class="button button-primary deliver-button">
+                Deliver to This Address
+            </button>
+        </form>
+        </aside>
+        </form>
+    </div>
+</main>
+
+<!-- Add address modal -->
+<div
+    class="modal-overlay"
+    id="addressModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="addressModalTitle">
+
+    <div class="address-modal">
+        <div class="modal-heading">
+            <h2 id="addressModalTitle">Add New Address</h2>
+            <button type="button" class="close-modal" id="closeAddressModal" aria-label="Close">×</button>
+        </div>
+
+        <p class="modal-description">
+            Enter your delivery details carefully.
+        </p>
+
+       <form method="POST" action="{% url 'save_order_address' order.id %}" >
+            {% csrf_token %}
+            <div class="form-field">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="full_name" maxlength="150" required autocomplete="name">
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Phone Number *</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    maxlength="15"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    pattern="[0-9+\-\s]{10,15}"
+                    title="Enter a valid phone number">
+            </div>
+
+            <div class="form-field full-width">
+                <label for="addressLine">Street Address *</label>
+                <textarea id="addressLine" name="address_line" required maxlength="500" autocomplete="street-address"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required maxlength="100" autocomplete="address-level2">
+            </div>
+
+            <div class="form-field">
+                <label for="state">State *</label>
+                <input type="text" id="state" name="state" required maxlength="100" autocomplete="address-level1">
+            </div>
+
+            <div class="form-field">
+                <label for="pincode">PIN Code *</label>
+                <input
+                    type="text"
+                    id="pincode"
+                    name="pincode"
+                    required
+                    inputmode="numeric"
+                    maxlength="6"
+                    pattern="[0-9]{6}"
+                    title="Enter a valid 6-digit PIN code"
+                    autocomplete="postal-code">
+            </div>
+
+            <div class="form-field">
+                <label for="country">Country *</label>
+                <input type="text" id="country" name="country" value="India" required maxlength="100" autocomplete="country-name">
+            </div>
+
+            <div class="form-field">
+                <label for="addressType">Address Type</label>
+                <select id="addressType" name="address_type">
+                    <option value="home">🏠 Home</option>
+                    <option value="work">💼 Work</option>
+                    <option value="other">📍 Other</option>
+                </select>
+            </div>
+
+            <div class="form-field full-width">
+                <label class="default-checkbox" style="display: flex;">
+                    <input type="checkbox" id="isDefault" name="is_default">
+                    Set as my default address
+                </label>
+            </div>
+
+            <p class="form-message" id="formMessage" role="alert"></p>
+
+            <div class="modal-actions">
+                <button type="button" class="button button-outline" id="cancelAddress">Cancel</button>
+                <button type="submit" class="button button-primary">Save Address</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("addressModal");
+    const form = document.getElementById("addressForm");
+    const addressList = document.getElementById("addressList");
+    const formMessage = document.getElementById("formMessage");
+    const feedback = document.getElementById("addressFeedback");
+    const openButton = document.getElementById("openAddressModal");
+    const emptyAddButton = document.getElementById("emptyAddAddress");
+    const closeButton = document.getElementById("closeAddressModal");
+    const cancelButton = document.getElementById("cancelAddress");
+
+    let previousFocus = null;
+
+    function openModal() {
+        previousFocus = document.activeElement;
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        document.getElementById("fullName").focus();
+    }
+
+    function closeModal() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+        formMessage.textContent = "";
+
+        if (previousFocus) previousFocus.focus();
+    }
+
+    openButton?.addEventListener("click", openModal);
+    emptyAddButton?.addEventListener("click", openModal);
+    closeButton.addEventListener("click", closeModal);
+    cancelButton.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("open")) {
+            closeModal();
+        }
+    });
+
+    function selectCard(card) {
+        addressList.querySelectorAll(".address-card").forEach(function (item) {
+            item.classList.remove("selected");
+            const radio = item.querySelector('input[name="selected_address"]');
+            if (radio) radio.checked = false;
+        });
+
+        const radio = card.querySelector('input[name="selected_address"]');
+        if (radio) radio.checked = true;
+
+        card.classList.add("selected");
+        feedback.textContent = "";
+    }
+
+    addressList.addEventListener("change", function (event) {
+        if (event.target.matches('input[name="selected_address"]')) {
+            selectCard(event.target.closest(".address-card"));
+        }
+    });
+
+    addressList.addEventListener("click", function (event) {
+        const deliverButton = event.target.closest(".deliver-button");
+        const card = event.target.closest(".address-card");
+
+        if (!card) return;
+
+        if (deliverButton) {
+            selectCard(card);
+
+            const selected = card.querySelector('input[name="selected_address"]');
+
+            if (selected && selected.value) {
+                feedback.textContent =
+                    "Address selected. Connect this selection to your Django checkout POST view to save it to the order.";
+            }
+        }
+    });
+
+    // Front-end preview only. This does not save the address to the database.
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        formMessage.textContent = "";
+
+        if (!form.reportValidity()) return;
+
+        const fullName = document.getElementById("fullName").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const addressLine = document.getElementById("addressLine").value.trim();
+        const city = document.getElementById("city").value.trim();
+        const state = document.getElementById("state").value.trim();
+        const pincode = document.getElementById("pincode").value.trim();
+        const country = document.getElementById("country").value.trim();
+        const addressType = document.getElementById("addressType").value;
+        const isDefault = document.getElementById("isDefault").checked;
+
+        if (!/^[0-9]{6}$/.test(pincode)) {
+            formMessage.textContent = "Please enter a valid 6-digit PIN code.";
+            return;
+        }
+
+        if (isDefault) {
+            addressList.querySelectorAll(".default-label").forEach(function (label) {
+                label.remove();
+            });
+        }
+
+        const emptyState = document.getElementById("emptyAddressState");
+        if (emptyState) emptyState.remove();
+
+        const card = document.createElement("article");
+        card.className = "address-card";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "selected_address";
+        radio.value = "";
+        radio.className = "address-radio";
+        radio.setAttribute("aria-label", "Select new address");
+        radio.checked = true;
+
+        const info = document.createElement("div");
+        info.className = "address-info";
+
+        const top = document.createElement("div");
+        top.className = "address-top";
+
+        const name = document.createElement("h3");
+        name.className = "address-name";
+        name.textContent = fullName;
+
+        const type = document.createElement("span");
+        type.className = "address-type";
+        type.textContent = addressType;
+
+        top.append(name, type);
+
+        const addressText = document.createElement("p");
+        addressText.className = "address-text";
+        addressText.textContent =
+            `${addressLine}, ${city}, ${state} - ${pincode}, ${country}`;
+
+        const phoneText = document.createElement("p");
+        phoneText.className = "address-phone";
+        phoneText.textContent = `Phone: ${phone}`;
+
+        info.append(top, addressText, phoneText);
+
+        if (isDefault) {
+            const label = document.createElement("span");
+            label.className = "default-label";
+            label.textContent = "✓ Default Address";
+            info.appendChild(label);
+        }
+
+        card.append(radio, info);
+        addressList.appendChild(card);
+
+        selectCard(card);
+        closeModal();
+        form.reset();
+        document.getElementById("country").value = "India";
+
+        feedback.textContent =
+            "Address added to this page preview. Submit it to your Django address-save endpoint to persist it.";
+    });
+});
+
+function submitForm(){
+    document.getElementById("shippinaddress").requestSubmit();
+}
+</script>
+
+</body>
+</html>
