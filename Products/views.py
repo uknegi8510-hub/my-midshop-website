@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from Products.models import Product, Category, Brand,ProductVariant
+from django.db.models import Q
+from .models import Product
+from django.http import JsonResponse
 
 
 def home(request):
@@ -83,3 +86,66 @@ def brand_product_listing(request, slug):
     }
 
     return render(request, 'product_listing.html', context)
+
+def live_search(request):
+
+    query = request.GET.get('q', '').strip()
+
+    products = Product.objects.none()
+
+    if query:
+
+        products = Product.objects.filter(
+            Q(name__icontains=query) |
+            Q(title_name__icontains=query) |
+            Q(brand_name__name__icontains=query) |
+            Q(category__name__icontains=query),
+            is_available=True
+        ).distinct()[:8]
+
+    results = []
+
+    for product in products:
+
+        results.append({
+            'name': product.name,
+            'title': product.title_name,
+            'price': str(product.price),
+            'slug': product.slug,
+        })
+
+    return JsonResponse({
+        'products': results
+    })
+
+
+from django.shortcuts import render
+from django.db.models import Q
+from .models import Product
+
+
+def search_products(request):
+
+    query = request.GET.get('q', '').strip()
+
+    products = Product.objects.none()
+
+    if query:
+        products = Product.objects.filter(
+            Q(name__icontains=query) |
+            Q(title_name__icontains=query) |
+            Q(brand_name__name__icontains=query) |
+            Q(category__name__icontains=query),
+            is_available=True
+        ).distinct()
+
+    context = {
+        'products': products,
+        'query': query,
+    }
+
+    return render(
+        request,
+        'Products/search_results.html',
+        context
+    )

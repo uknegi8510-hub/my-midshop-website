@@ -1,0 +1,43 @@
+{% include 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Search Results</h2>
+
+<p>Results for: {{ query }}</p>
+
+{% if products %}
+
+    <div class="product-container">
+
+        {% for product in products %}
+
+            <div class="product-card">
+
+                <h3>{{ product.name }}</h3>
+
+                <p>{{ product.title_name }}</p>
+
+                <p>₹{{ product.price }}</p>
+
+                <p>{{ product.brand_name.name }}</p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% else %}
+
+    <h3>No products found!</h3>
+
+{% endif %}
+</body>
+</html>

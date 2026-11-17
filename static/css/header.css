@@ -128,8 +128,12 @@ body{
     padding: 0 4px;
     box-sizing: border-box;
 }
+#searchForm{
+    width: 100%;
+}
 
 .search-box input{
+    width: 86%;
     border: none;
     outline: none;
     flex: 1;
@@ -140,6 +144,7 @@ body{
     color: #838080;
 }
 
+
 .search-icon{
     display: flex;
     justify-content: center;
@@ -147,8 +152,10 @@ body{
     align-items: center;
     border:none;
     font-size: 30px;
-    color: #666;
-    /* cursor: pointer; */
+    /* color: #666; */
+    cursor: pointer;
+    color: red;
+
 }
 .search-icon:hover{
     background-color: white;

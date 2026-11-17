@@ -6,6 +6,7 @@ urlpatterns = [
     path('product_listing/<slug:slug>/',views.product_listing ,name="product_listing"),
     path('brand/<slug:slug>/', views.brand_product_listing, name='brand_product_listing'),   
     path('product_listing/product_page/<slug:slug>',views.product_page,name="product_page"),
-]
+    path('search/', views.search_products, name='search_products'),
+    path('live-search/', views.live_search, name='live_search'),    ]
 
 
