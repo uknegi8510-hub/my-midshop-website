@@ -16,7 +16,11 @@ idna==3.11
 inflection==0.5.1
 pillow==10.4.0
 platformdirs==4.3.6
+psycopg==3.2.13
+psycopg-binary==3.2.13
+python-dotenv==1.0.1
 pytz==2026.2
+razorpay==2.0.1
 requests==2.32.4
 six==1.17.0
 soupsieve==2.7
