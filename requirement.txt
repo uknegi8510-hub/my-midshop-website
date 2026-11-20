@@ -5,6 +5,7 @@ beautifulsoup4==4.14.3
 certifi==2026.1.4
 charset-normalizer==3.4.4
 distlib==0.4.0
+dj-database-url==3.0.1
 Django==4.2.30
 django-autoslug==1.9.9
 django-quill==0.1.0
