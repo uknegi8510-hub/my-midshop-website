@@ -20,6 +20,7 @@ import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / '.env')
 AUTH_USER_MODEL = 'Accounts.User'
 
 
@@ -36,6 +37,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'midshop.onrender.com',
+    'my-midshop-website.onrender.com',
 ]
 
 # Application definition
@@ -102,9 +104,9 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL:
     DATABASES = {
-        'default': dj_database_url.config(
-            default=DATABASE_URL,
-            conn_max_age=600,
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600
         )
     }
 else:
