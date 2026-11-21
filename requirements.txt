@@ -1,10 +1,11 @@
 appdirs==1.4.4
 asgiref==3.8.1
+backports.zoneinfo==0.2.1
 beautifulsoup4==4.14.3
 certifi==2026.1.4
 charset-normalizer==3.4.4
 distlib==0.4.0
-dj-database-url==3.0.1
+dj-database-url==2.2.0
 Django==4.2.30
 django-autoslug==1.9.9
 django-quill==0.1.0
@@ -15,6 +16,7 @@ fs==2.4.16
 gunicorn==23.0.0
 idna==3.11
 inflection==0.5.1
+packaging==26.2
 pillow==10.4.0
 platformdirs==4.3.6
 psycopg==3.2.13
@@ -33,3 +35,4 @@ unicode-slugify==0.1.5
 Unidecode==1.4.0
 urllib3==2.2.3
 virtualenv==20.35.3
+whitenoise==6.7.0
