@@ -1,0 +1,3984 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "0i8bkq00b7f4ip1y6cw8wvphhe4nvzs0",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xPaaD:ttn8hlKWXCI1HKB0mRWGn2JjrA3P5NRUY4nc752GrHM",
+    "expire_date": "2026-11-21T07:11:25.816Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0qs9faq0jw6jjp1tmfldrtgylb20jnd3",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xCW33:9uiKMGzjsjboBkakmWifa-WGpUFRc_tNSAHz9aURMeE",
+    "expire_date": "2026-10-16T05:43:09.427Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "12omeoacis6ufi2zkvfacfzgfboy4v9y",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xIsHY:SCWQNgtphNclyahFBXt5Q7TOrVv176_L6ArmG2CMHRY",
+    "expire_date": "2026-11-02T18:40:24.353Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "143mzzkfp0lv8onv7vza30l9d5s5rp69",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xGDT6:Tw_HotW1jVj7z91zBraR976y4AdejIvahEwzXISKetU",
+    "expire_date": "2026-10-26T10:41:20.363Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "16gi1g35lvjiq90k2j3zkjm1nf7azjgx",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1x89OP:Yw6TeJ0rj4xE2qDtNRuhp6yOCajuKXWxOf5wahyLmxY",
+    "expire_date": "2026-10-04T04:43:09.060Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1fd2up830mpcy6nei67a81eev0dnx9sd",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xFxj3:m7RhR6KmcKkbK5LZQ37U-IAGbS3hWl_chr0UtUYYvms",
+    "expire_date": "2026-10-25T17:52:45.743Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "363p2ygmcqtsd1zmzll0rhha6v190uev",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xBmlY:MLZ4sfCl2ideoRlFnwVSh5bQoLMSiZxXGnX4SK7YKgk",
+    "expire_date": "2026-10-14T05:22:04.601Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4sgleha03z8ej14zz5xnhww11oaf5hzz",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1x7TGU:JLzw-jZLdA8CrC6L2Kge4cl3oeVTIbvbPLwqaYQXBC8",
+    "expire_date": "2026-10-02T07:44:10.779Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "61lvwjgf3iuhui2nphazgkrso76ljgxq",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xLbqv:w2ogCfsslvtQvTHTH28A9uSdSzJ_mFEkl_V3idKYzYg",
+    "expire_date": "2026-11-10T07:44:13.728Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6fhh0kn0skkos0uze4e4za045qb4j1ez",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1x9bFn:KzySU5N4paVUDC0F__Ilxz9iVrW1iBuB5pi4NGSmmRQ",
+    "expire_date": "2026-10-08T04:40:15.011Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7b1ysgtb90tcqnfo8izcje0p46bcolck",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1x7ZS5:UhcL9SCfX3Q7yDQeqX8z3KeA9NvGt0x0m5EVS-2ce0Q",
+    "expire_date": "2026-10-02T14:20:33.928Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "92cezv8qkqzmvvenrevdtck4dx968ha2",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xNZAs:P_xu_dCSWIbKRajSblUbU4ADWEDX5W6B63-EbBuydgU",
+    "expire_date": "2026-11-15T17:16:54.689Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "arj8v1nrsenjk4td1pnre2bid217dkx9",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xIjkr:vkN8SEc_0ekHYYpw6NF5RKbZpwbRWywDahV8RzDE-Gc",
+    "expire_date": "2026-11-02T09:34:05.529Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c8e0rl2f32hv3kjtk2tuo40ow9s19hw0",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xAtdy:XuTdQXayVsH3ebrIsAtGebSdXF3Si8yncwMwrl-xBLE",
+    "expire_date": "2026-10-11T18:30:34.303Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dg7quok113ir0e5dstplft5sfa96g7z3",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xCWIC:pTPZY6QDGq7oUWSwt4MoVzEG9eiT41pBUovzkGTItgg",
+    "expire_date": "2026-10-16T05:58:48.407Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ejmv68qfxau78tbpo8xi37dvu5ww53ys",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xGwvj:6I-RDI92tblBksMuDWKT9zoRZT3yTjAOzZ3qZ5mjemo",
+    "expire_date": "2026-10-28T11:13:55.676Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fxyml8r7k12d0ad7z6mf31reamv3u0yd",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xOfwY:juGTt41B-2PQBUhR2Kt5E9r_J_wPGEoGHaBr9cqnJrA",
+    "expire_date": "2026-11-18T18:42:42.775Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fymif3z6cvqdho8ycv71ozk84kce10o2",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xFTF9:93ap2nCiO6EmyJhBAagy08qo13CoZw5-BW8Orvk6qYw",
+    "expire_date": "2026-10-24T09:19:51.892Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g0i4ajdftmc5j7nrf7uw89f3foxlq8zi",
+  "fields": {
+    "session_data": ".eJxVjMGSwiAQRP9lzikKAgTJ0ft-Q2qYQYNakArkZPnva9StWo_d_V7fYcKtzdNW4zolhhF66P53Aeka8z7wBfO5CCq5rSmIHRGftYqfwvF2_LBfBzPW-WmbgaInz-isUSYYqwIZRnnoOZyQWLP3SrMzGENvrfOHk8ZBOqJ-UNLup4Rrm1ppeKsw3qFu4RVgVMZ4LWQHnCqVLbd3JXQHdU7LkvIZRit34s_Q8mm4x-MXJfhSBw:1xGD7F:hyd95r8y31KMQcPPXqrSO59TPHM0es-FCUiYa_UlKcQ",
+    "expire_date": "2026-10-26T10:18:45.727Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h2feykbzh873mw4pcigjdqmeut1a5w1t",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xOF03:YPB0nW8-gwrQfFRdrC_5JLsSDSMwpxQ5ibxy6OEGBUA",
+    "expire_date": "2026-11-17T13:56:31.027Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h4ifty6q387af3jb7fcnnbfpy1q0p4qa",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2k_WHkp4zROvdDQ4gW8qnQtwdIqWA9s3Me6kBt7UM2yLzMLE6K1Cn3y0jPaTugO9Yb01Tq-s8Zb0r-qCLvjaW5-Vw_w4KLuVbGxKyzmeSMAYOoxtNbxESMOeUIhmKDGijJ2c63yWxMQToeiGfgAyq9wf48Dfi:1xIjsU:IlRF9yoW8HxWkuqDaPWJd3inLW5vx-LaCL0v1yivqVo",
+    "expire_date": "2026-11-02T09:41:58.994Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h5t7mxlswaokfc576ypjcr967jyieppy",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xLPuu:j5Trf0_lA2t2ABQ6-xj9cGaPDucs2lIl322ycY-39Iw",
+    "expire_date": "2026-11-09T18:59:32.912Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hiwhwsr8l9tz6g87bmnrv7eake9jpkkj",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xEWNd:KiTPVlw994sXcZhu6RG-F461fopHIWI53IAvx793a_4",
+    "expire_date": "2026-10-21T18:28:41.882Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l6hg0g0y8izv833l36lwcy9fbh61jlbc",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xGgR9:eLwFrwTfc7mFDqZlJPbP_y4xwucdbDDK1g2Bvfm1L0U",
+    "expire_date": "2026-10-27T17:37:15.050Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ljmnlhm2hjg1mewymjmyxsw704z7t3ad",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xDz1i:ulVvKcdVj7yaInBvjppSM3Q4FtF0on-A1g0lcxYcwV4",
+    "expire_date": "2026-10-20T06:51:50.620Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "llxzmlkmvc9uhomegvily51yymvpbwjy",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xOrq3:xzfG9ZA-A7rDLkBjpl4d6KGDmFcWCDVKT5vOG94b9r8",
+    "expire_date": "2026-11-19T07:24:47.273Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ltgd55ff2w1xc8coqj2xcp1jyg4dvywz",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xBQWl:1FM_de7Qa5hW7hcJgyYCAhuEVoO9sa3uq918pdNXHsM",
+    "expire_date": "2026-10-13T05:37:19.662Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lx51fffstjr8sdw4spjgz34yuzl86lhw",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xQNed:-lc0VBOQWkg5o6czXyhsHobMCiVwHNbD3d0FxWfJQnM",
+    "expire_date": "2026-11-23T11:35:15.448Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "n4mcbxdjbq4zoczscnkka2npp4fwmhhs",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xHauI:a9IQfURXk1b7S2Jyt5y8CDcYDgHswuCDOFxhla4dPQg",
+    "expire_date": "2026-10-30T05:55:06.960Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "njjdlea1n9y6lmqbd9gyd6h2axncpmni",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAURP-FtSFyoVBcuvcbCPdRWzWQlHZl_HfbpAvdzGLOmXmrlNdlTGuTOU2sLsqq02-HmZ5SdsCPXO5VUy3LPKHeFX3Qpm-V5XU93L-DMbdxW8tA2fXGbBG87axnDL0TjywQh4iOI4YuRhdAjIWzCWQIBwJmgK4H9fkC5M03sg:1xOF0P:CPxoOl2dF4zeahnI0fcd5MTqgCqMu6nz1tufbQk3V_8",
+    "expire_date": "2026-11-17T13:56:53.916Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "omz5n0oojzas8jdwykv7gz0x42n5dt8s",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xI4lp:zvobaFNsY6lUyLhaKL__N1XLZXZpDMfS1GGO8kxbrSw",
+    "expire_date": "2026-10-31T13:48:21.376Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "otiut0tcisk92yhddtnh2b4x9uha55ik",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1x7Sl1:eo7X2Y49FLg0dPn-H_kZzat8rhmd-IHmA7PHjsxaHUA",
+    "expire_date": "2026-10-02T07:11:39.414Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qh0ngpyvem5debsk3w1q3gob1qsdb7p9",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAURP-FtSFyoVBcuvcbCPdRWzWQlHZl_HfbpAvdzGLOmXmrlNdlTGuTOU2sLsqq02-HmZ5SdsCPXO5VUy3LPKHeFX3Qpm-V5XU93L-DMbdxW8tA2fXGbBG87axnDL0TjywQh4iOI4YuRhdAjIWzCWQIBwJmgK4H9fkC5M03sg:1xOry9:vF2yjipyJ_GR1VrmS4y2qSBTECxP1Tv7xf7iPRcx3Po",
+    "expire_date": "2026-11-19T07:33:09.055Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rxlqhjadtew7xozn4v67h6ez8sr7zv4g",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xNnVz:BA4BNYxjvCinB0YtuhToJT_At6RdY20R2TW8PvlX44c",
+    "expire_date": "2026-11-16T08:35:39.060Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "voan4cu41zhh6p6l07milqcugtlogjiv",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xBbCj:FePmnshuDqkE-nImOHisfyt5b_hfKqWhm9nBLDl6kFs",
+    "expire_date": "2026-10-13T17:01:21.129Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w0sv3nrp56tx7197n6ngt1cm1m3maia8",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xTDjv:2u51RpUxPVFmWokGiuP6R9tIyGFPyqQUnflAFLbgQyY",
+    "expire_date": "2026-12-01T07:36:27.295Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wogfb27r29ukv01z0fwzgcn0qw2n8376",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xEsjg:hQeGNgYxwe1aHtYWC7BCNf3re9XG5CFMaqe5cAE-92E",
+    "expire_date": "2026-10-22T18:20:56.353Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xwxem0jnuw5m6w1gwukky7sskq1oktdw",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xK9qQ:pEIFNCdjinhRHkBBeqDRhUy8HV89c0aEzPm_7cU5J9k",
+    "expire_date": "2026-11-06T07:37:42.764Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yzgy7l6fwl1oaickl33auwl8w9u7v14y",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hAZoBtcup8zkAYaGTWQzGdlvLtOMgvdvqp6LxFoW2vYFp7DlMVFKHH63SKlB7cd5Du1W5ept3WeotwVedBFjj3z83q4fweVlvqtIxatQRdUxkbPQIReW0WquJg9ACZ2CENEMJjc4AuDsd7ls888WK3F-wPUiTdC:1xLP9H:dGv92SKvj2h_b5VpK8qPndAgU7LN6aO9E-kHf2Z7Zbc",
+    "expire_date": "2026-11-09T18:10:19.294Z"
+  }
+},
+{
+  "model": "Products.category",
+  "pk": 14,
+  "fields": {
+    "name": "Men",
+    "image": "category/t-shirt.webp",
+    "slug": "men",
+    "is_active": true,
+    "created_at": "2026-10-03T07:30:25.444Z"
+  }
+},
+{
+  "model": "Products.category",
+  "pk": 15,
+  "fields": {
+    "name": "Saree",
+    "image": "category/saree_ApGm2gF.webp",
+    "slug": "saree",
+    "is_active": true,
+    "created_at": "2026-10-03T14:14:18.121Z"
+  }
+},
+{
+  "model": "Products.category",
+  "pk": 16,
+  "fields": {
+    "name": "Men's Jeans",
+    "image": "category/mens_jeans_6mrXIN7.jpg",
+    "slug": "mens-jeans",
+    "is_active": true,
+    "created_at": "2026-10-03T14:14:41.799Z"
+  }
+},
+{
+  "model": "Products.category",
+  "pk": 17,
+  "fields": {
+    "name": "Men's Jacket",
+    "image": "category/mens_jacket_V74bPVd.jpg",
+    "slug": "mens-j",
+    "is_active": true,
+    "created_at": "2026-10-03T14:16:10.545Z"
+  }
+},
+{
+  "model": "Products.category",
+  "pk": 18,
+  "fields": {
+    "name": "Lehenga",
+    "image": "category/lehenga_2geACXJ.webp",
+    "slug": "le",
+    "is_active": true,
+    "created_at": "2026-10-03T14:16:43.887Z"
+  }
+},
+{
+  "model": "Products.category",
+  "pk": 19,
+  "fields": {
+    "name": "Kurti",
+    "image": "category/kurti_wxeJo4A.webp",
+    "slug": "kurti",
+    "is_active": true,
+    "created_at": "2026-10-03T14:17:22.940Z"
+  }
+},
+{
+  "model": "Products.brand",
+  "pk": 3,
+  "fields": {
+    "name": "Urban Style",
+    "slug": "urban-style",
+    "logo": "brands/urban-style.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "Products.brand",
+  "pk": 4,
+  "fields": {
+    "name": "Sangria",
+    "slug": "sangria",
+    "logo": "",
+    "is_active": true
+  }
+},
+{
+  "model": "Products.brand",
+  "pk": 5,
+  "fields": {
+    "name": "Libas",
+    "slug": "libas",
+    "logo": "",
+    "is_active": true
+  }
+},
+{
+  "model": "Products.brand",
+  "pk": 6,
+  "fields": {
+    "name": "Levi's",
+    "slug": "levis",
+    "logo": "",
+    "is_active": true
+  }
+},
+{
+  "model": "Products.brand",
+  "pk": 7,
+  "fields": {
+    "name": "Wildcraft",
+    "slug": "wildcraft",
+    "logo": "",
+    "is_active": true
+  }
+},
+{
+  "model": "Products.brand",
+  "pk": 8,
+  "fields": {
+    "name": "Manyavar",
+    "slug": "manyavar",
+    "logo": "",
+    "is_active": true
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 7,
+  "fields": {
+    "category": 14,
+    "brand_name": 3,
+    "name": "Classic Solid Cotton T-Shirt",
+    "title_name": "Classic Solid Cotton T-Shirt for Men",
+    "slug": "classic-solid-cotton-t-shirt",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"insert\\\":\\\"flksdlkfskdflk\\\\t\\\\t\\\\n\\\"}]}\",\"html\":\"<p>flksdlkfskdflk\\t\\t</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"insert\\\":\\\"dfjksdflksdjkf\\\\n\\\"}]}\",\"html\":\"<p>dfjksdflksdjkf</p>\"}",
+    "price": 799,
+    "discount_price": 599,
+    "stock": 50,
+    "is_available": true,
+    "created_at": "2026-10-03T07:54:47.919Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 8,
+  "fields": {
+    "category": 14,
+    "brand_name": 3,
+    "name": "Slim Fit Denim Jeans",
+    "title_name": "Slim Fit Denim Jeans for Men",
+    "slug": "slim-fit-denim-jeans",
+    "General": "{\"delta\":\"\",\"html\":\"\"}",
+    "Product_details": "{\"delta\":\"\",\"html\":\"\"}",
+    "price": 1499,
+    "discount_price": 1099,
+    "stock": 40,
+    "is_available": true,
+    "created_at": "2026-10-03T13:55:47.802Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 9,
+  "fields": {
+    "category": 14,
+    "brand_name": 3,
+    "name": "Regular Fit Casual Shirt",
+    "title_name": "Regular Fit Casual Shirt for Men",
+    "slug": "regular-fit-casual-shirt",
+    "General": "{\"delta\":\"\",\"html\":\"\"}",
+    "Product_details": "{\"delta\":\"\",\"html\":\"\"}",
+    "price": 999,
+    "discount_price": 749,
+    "stock": 35,
+    "is_available": true,
+    "created_at": "2026-10-03T13:55:47.810Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 10,
+  "fields": {
+    "category": 14,
+    "brand_name": 3,
+    "name": "Cotton Polo T-Shirt",
+    "title_name": "Premium Cotton Polo T-Shirt for Men",
+    "slug": "cotton-polo-t-shirt",
+    "General": "{\"delta\":\"\",\"html\":\"\"}",
+    "Product_details": "{\"delta\":\"\",\"html\":\"\"}",
+    "price": 899,
+    "discount_price": 699,
+    "stock": 45,
+    "is_available": true,
+    "created_at": "2026-10-03T13:55:47.810Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 11,
+  "fields": {
+    "category": 14,
+    "brand_name": 3,
+    "name": "Hooded Sweatshirt",
+    "title_name": "Comfortable Hooded Sweatshirt for Men",
+    "slug": "hooded-sweatshirt",
+    "General": "{\"delta\":\"\",\"html\":\"\"}",
+    "Product_details": "{\"delta\":\"\",\"html\":\"\"}",
+    "price": 1299,
+    "discount_price": 999,
+    "stock": 30,
+    "is_available": true,
+    "created_at": "2026-10-03T13:55:47.824Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 12,
+  "fields": {
+    "category": 15,
+    "brand_name": 4,
+    "name": "Traditional Banarasi Silk",
+    "title_name": "Traditional Banarasi Silk Saree",
+    "slug": "traditional-banarasi-silk",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Silk Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Woven\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\nElegant Banarasi-inspired\\\\nsaree featuring \\\\ntraditional woven \\\\npatterns and a decorative border. \\\\nSuitable for weddings, \\\\nfestivals and traditional occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Silk Blend</p><p><strong>Pattern:</strong> Woven</p><p><strong>Product Details:</strong></p><p>Elegant Banarasi-inspired</p><p>saree featuring </p><p>traditional woven </p><p>patterns and a decorative border. </p><p>Suitable for weddings, </p><p>festivals and traditional occasions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"insert\\\":\\\"\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Silk Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Woven\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"Elegant Banarasi-inspired\\\\nsaree featuring \\\\ntraditional woven \\\\npatterns and a decorative border. \\\\nSuitable for weddings, \\\\nfestivals and traditional occasions.\\\\n\\\"}]}\",\"html\":\"<p><br></p><p><strong>Material:</strong> Silk Blend</p><p><strong>Pattern:</strong> Woven</p><p><strong>Product Details:</strong>Elegant Banarasi-inspired</p><p>saree featuring </p><p>traditional woven </p><p>patterns and a decorative border. </p><p>Suitable for weddings, </p><p>festivals and traditional occasions.</p>\"}",
+    "price": 2499,
+    "discount_price": 1999,
+    "stock": 20,
+    "is_available": true,
+    "created_at": "2026-10-04T05:43:40.898Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 13,
+  "fields": {
+    "category": 15,
+    "brand_name": 4,
+    "name": "Floral Printed Georgette",
+    "title_name": "Floral Printed Georgette Saree",
+    "slug": "floral-printed-georgette",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Floral Print\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Lightweight georgette saree featuring an attractive floral print. Easy to drape and comfortable to wear, making it suitable for parties, gatherings and festive occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Georgette</p><p><strong>Pattern:</strong> Floral Print</p><p><strong>Product Details:</strong></p><p> Lightweight georgette saree featuring an attractive floral print. Easy to drape and comfortable to wear, making it suitable for parties, gatherings and festive occasions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Floral Print\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Lightweight georgette saree featuring an attractive floral print. Easy to drape and comfortable to wear, making it suitable for parties, gatherings and festive occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Georgette</p><p><strong>Pattern:</strong> Floral Print</p><p><strong>Product Details:</strong></p><p> Lightweight georgette saree featuring an attractive floral print. Easy to drape and comfortable to wear, making it suitable for parties, gatherings and festive occasions.</p>\"}",
+    "price": 1499,
+    "discount_price": 1099,
+    "stock": -15,
+    "is_available": true,
+    "created_at": "2026-10-04T05:44:57.505Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 14,
+  "fields": {
+    "category": 15,
+    "brand_name": 4,
+    "name": "Embroidered Designer",
+    "title_name": "Embroidered Designer Saree",
+    "slug": "embroidered-designer",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Embroidery\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Designer saree featuring elegant embroidery work and a beautifully finished border. \\\\nA sophisticated choice for parties, receptions and special occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Georgette</p><p><strong>Pattern:</strong> Embroidery</p><p><strong>Product Details:</strong></p><p> Designer saree featuring elegant embroidery work and a beautifully finished border. </p><p>A sophisticated choice for parties, receptions and special occasions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Embroidery\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Designer saree featuring elegant embroidery work and a beautifully finished border. \\\\nA sophisticated choice for parties, receptions and special occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Georgette</p><p><strong>Pattern:</strong> Embroidery</p><p><strong>Product Details:</strong></p><p> Designer saree featuring elegant embroidery work and a beautifully finished border. </p><p>A sophisticated choice for parties, receptions and special occasions.</p>\"}",
+    "price": 2999,
+    "discount_price": 2399,
+    "stock": 48,
+    "is_available": true,
+    "created_at": "2026-10-04T05:46:08.315Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 15,
+  "fields": {
+    "category": 15,
+    "brand_name": 4,
+    "name": "Cotton Handloom",
+    "title_name": "Cotton Handloom Saree",
+    "slug": "cotton-handloom",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Cotton\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Handloom\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Comfortable handloom-style cotton saree designed for everyday and traditional wear. Breathable fabric makes it suitable for long hours of comfortable use.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Cotton</p><p><strong>Pattern:</strong> Handloom</p><p><strong>Product Details:</strong></p><p> Comfortable handloom-style cotton saree designed for everyday and traditional wear. Breathable fabric makes it suitable for long hours of comfortable use.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Cotton\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Handloom\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Comfortable handloom-style cotton saree designed for everyday and traditional wear. Breathable fabric makes it suitable for long hours of comfortable use.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Cotton</p><p><strong>Pattern:</strong> Handloom</p><p><strong>Product Details:</strong></p><p> Comfortable handloom-style cotton saree designed for everyday and traditional wear. Breathable fabric makes it suitable for long hours of comfortable use.</p>\"}",
+    "price": 1799,
+    "discount_price": 1399,
+    "stock": null,
+    "is_available": true,
+    "created_at": "2026-10-04T05:47:01.192Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 16,
+  "fields": {
+    "category": 15,
+    "brand_name": 4,
+    "name": "Party Wear Organza",
+    "title_name": "Party Wear Organza Saree",
+    "slug": "party-wear-organza",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Organza\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Embellished\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Elegant organza saree with a lightweight feel and attractive embellished detailing. Perfect for parties, festive celebrations and evening events.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Organza</p><p><strong>Pattern:</strong> Embellished</p><p><strong>Product Details:</strong></p><p> Elegant organza saree with a lightweight feel and attractive embellished detailing. Perfect for parties, festive celebrations and evening events.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Organza\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Pattern:\\\"},{\\\"insert\\\":\\\" Embellished\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Elegant organza saree with a lightweight feel and attractive embellished detailing. Perfect for parties, festive celebrations and evening events.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Organza</p><p><strong>Pattern:</strong> Embellished</p><p><strong>Product Details:</strong></p><p> Elegant organza saree with a lightweight feel and attractive embellished detailing. Perfect for parties, festive celebrations and evening events.</p>\"}",
+    "price": 2299,
+    "discount_price": 1799,
+    "stock": 11,
+    "is_available": true,
+    "created_at": "2026-10-04T05:48:02.404Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 17,
+  "fields": {
+    "category": 19,
+    "brand_name": 8,
+    "name": "Floral Printed Cotton",
+    "title_name": "Floral Printed Cotton Kurti",
+    "slug": "floral-printed-cotton",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Comfortable cotton kurti featuring a beautiful floral print. Breathable fabric and a simple silhouette make it suitable for everyday office, college and casual wear.\\\\n\\\"}]}\",\"html\":\"<p><strong>Fit:</strong> Straight</p><p><strong>Product Details:</strong></p><p> Comfortable cotton kurti featuring a beautiful floral print. Breathable fabric and a simple silhouette make it suitable for everyday office, college and casual wear.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Comfortable cotton kurti featuring a beautiful floral print. Breathable fabric and a simple silhouette make it suitable for everyday office, college and casual wear.\\\\n\\\"}]}\",\"html\":\"<p><strong>Fit:</strong> Straight</p><p><strong>Product Details:</strong></p><p> Comfortable cotton kurti featuring a beautiful floral print. Breathable fabric and a simple silhouette make it suitable for everyday office, college and casual wear.</p>\"}",
+    "price": 899,
+    "discount_price": 699,
+    "stock": 4,
+    "is_available": true,
+    "created_at": "2026-10-04T05:50:17.271Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 18,
+  "fields": {
+    "category": 19,
+    "brand_name": 8,
+    "name": "Straight Fit Rayon",
+    "title_name": "Straight Fit Rayon Kurti",
+    "slug": "straight-fit-rayon",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Rayon\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Stylish straight-fit kurti made from soft rayon fabric. Features a comfortable design suitable for both casual and semi-formal occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Rayon</p><p><strong>Fit:</strong> Straight</p><p><strong>Product Details:</strong></p><p> Stylish straight-fit kurti made from soft rayon fabric. Features a comfortable design suitable for both casual and semi-formal occasions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Rayon\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Stylish straight-fit kurti made from soft rayon fabric. Features a comfortable design suitable for both casual and semi-formal occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Rayon</p><p><strong>Fit:</strong> Straight</p><p><strong>Product Details:</strong></p><p> Stylish straight-fit kurti made from soft rayon fabric. Features a comfortable design suitable for both casual and semi-formal occasions.</p>\"}",
+    "price": 1899,
+    "discount_price": 899,
+    "stock": 8,
+    "is_available": true,
+    "created_at": "2026-10-04T05:53:05.679Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 19,
+  "fields": {
+    "category": 19,
+    "brand_name": 8,
+    "name": "Embroidered Anarkali",
+    "title_name": "Embroidered Anarkali Kurti",
+    "slug": "embroidered-anarkali",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Rayon\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Anarkali\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Elegant Anarkali-style kurti featuring detailed embroidery. Its flowing silhouette gives a graceful ethnic appearance, perfect for festive occasions and family functions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Rayon</p><p> <strong>Fit:</strong> Anarkali</p><p> <strong>Product Details:</strong></p><p> Elegant Anarkali-style kurti featuring detailed embroidery. Its flowing silhouette gives a graceful ethnic appearance, perfect for festive occasions and family functions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Rayon\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Anarkali\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Elegant Anarkali-style kurti featuring detailed embroidery. Its flowing silhouette gives a graceful ethnic appearance, perfect for festive occasions and family functions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Rayon</p><p> <strong>Fit:</strong> Anarkali</p><p> <strong>Product Details:</strong></p><p> Elegant Anarkali-style kurti featuring detailed embroidery. Its flowing silhouette gives a graceful ethnic appearance, perfect for festive occasions and family functions.</p>\"}",
+    "price": 1999,
+    "discount_price": 999,
+    "stock": 22,
+    "is_available": true,
+    "created_at": "2026-10-04T05:54:02.808Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 20,
+  "fields": {
+    "category": 19,
+    "brand_name": 8,
+    "name": "Printed A-Line",
+    "title_name": "Printed A-Line Kurti",
+    "slug": "printed-a-line",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Cotton\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" A-Line\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Comfortable A-line kurti with an attractive all-over print. Lightweight cotton fabric makes it ideal for everyday summer and casual wear.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Cotton</p><p><strong>Fit:</strong> A-Line</p><p><strong>Product Details:</strong></p><p> Comfortable A-line kurti with an attractive all-over print. Lightweight cotton fabric makes it ideal for everyday summer and casual wear.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Cotton\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" A-Line\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Comfortable A-line kurti with an attractive all-over print. Lightweight cotton fabric makes it ideal for everyday summer and casual wear.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Cotton</p><p><strong>Fit:</strong> A-Line</p><p><strong>Product Details:</strong></p><p> Comfortable A-line kurti with an attractive all-over print. Lightweight cotton fabric makes it ideal for everyday summer and casual wear.</p>\"}",
+    "price": 2999,
+    "discount_price": 969,
+    "stock": 24,
+    "is_available": true,
+    "created_at": "2026-10-04T05:54:54.447Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 21,
+  "fields": {
+    "category": 19,
+    "brand_name": 8,
+    "name": "Festive Embroidered",
+    "title_name": "Festive Embroidered Kurti",
+    "slug": "festive-embroidered",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Cotton Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Festive kurti featuring elegant embroidery and decorative detailing. Designed to provide a traditional yet modern look for celebrations and special occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Cotton Blend</p><p><strong>Fit:</strong> Straight</p><p><strong>Product Details:</strong></p><p> Festive kurti featuring elegant embroidery and decorative detailing. Designed to provide a traditional yet modern look for celebrations and special occasions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Cotton Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Festive kurti featuring elegant embroidery and decorative detailing. Designed to provide a traditional yet modern look for celebrations and special occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Cotton Blend</p><p><strong>Fit:</strong> Straight</p><p><strong>Product Details:</strong></p><p> Festive kurti featuring elegant embroidery and decorative detailing. Designed to provide a traditional yet modern look for celebrations and special occasions.</p>\"}",
+    "price": 2999,
+    "discount_price": 1599,
+    "stock": 17,
+    "is_available": true,
+    "created_at": "2026-10-04T05:56:03.931Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 22,
+  "fields": {
+    "category": 16,
+    "brand_name": 6,
+    "name": "Slim Fit Blue",
+    "title_name": "Slim Fit Blue Jeans",
+    "slug": "slim-fit-blue",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Slim Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic blue denim jeans with a modern slim fit. Comfortable stretch fabric allows easy movement while maintaining a stylish appearance.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Slim Fit</p><p><strong>Product Details:</strong></p><p> Classic blue denim jeans with a modern slim fit. Comfortable stretch fabric allows easy movement while maintaining a stylish appearance.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Slim Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic blue denim jeans with a modern slim fit. Comfortable stretch fabric allows easy movement while maintaining a stylish appearance.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Slim Fit</p><p><strong>Product Details:</strong></p><p> Classic blue denim jeans with a modern slim fit. Comfortable stretch fabric allows easy movement while maintaining a stylish appearance.</p>\"}",
+    "price": 1299,
+    "discount_price": 999,
+    "stock": 12,
+    "is_available": true,
+    "created_at": "2026-10-04T05:57:06.882Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 23,
+  "fields": {
+    "category": 16,
+    "brand_name": 6,
+    "name": "Regular Fit Dark Blue",
+    "title_name": "Regular Fit Dark Blue Jeans",
+    "slug": "regular-fit-dark-blue",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic dark blue jeans designed for everyday comfort. Regular-fit construction provides a relaxed feel and works well with T-shirts, shirts and casual footwear.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Classic dark blue jeans designed for everyday comfort. Regular-fit construction provides a relaxed feel and works well with T-shirts, shirts and casual footwear.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic dark blue jeans designed for everyday comfort. Regular-fit construction provides a relaxed feel and works well with T-shirts, shirts and casual footwear.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Classic dark blue jeans designed for everyday comfort. Regular-fit construction provides a relaxed feel and works well with T-shirts, shirts and casual footwear.</p>\"}",
+    "price": 1499,
+    "discount_price": 199,
+    "stock": 44,
+    "is_available": true,
+    "created_at": "2026-10-04T05:58:10.066Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 24,
+  "fields": {
+    "category": 16,
+    "brand_name": 6,
+    "name": "Stretchable Black",
+    "title_name": "Stretchable Black Jeans",
+    "slug": "stretchable-black",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Stretch Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Slim Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Versatile black jeans made with stretch denim for improved comfort and flexibility. Suitable for casual outings, travel and everyday styling.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Stretch Denim</p><p><strong>Fit:</strong> Slim Fit</p><p><strong>Product Details:</strong></p><p> Versatile black jeans made with stretch denim for improved comfort and flexibility. Suitable for casual outings, travel and everyday styling.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Stretch Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Slim Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Versatile black jeans made with stretch denim for improved comfort and flexibility. Suitable for casual outings, travel and everyday styling.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Stretch Denim</p><p><strong>Fit:</strong> Slim Fit</p><p><strong>Product Details:</strong></p><p> Versatile black jeans made with stretch denim for improved comfort and flexibility. Suitable for casual outings, travel and everyday styling.</p>\"}",
+    "price": 1399,
+    "discount_price": 1049,
+    "stock": 77,
+    "is_available": true,
+    "created_at": "2026-10-04T05:59:13.584Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 25,
+  "fields": {
+    "category": 16,
+    "brand_name": 6,
+    "name": "Light Wash Straight",
+    "title_name": "Light Wash Straight Jeans",
+    "slug": "light-wash-straight",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic light-wash jeans with a straight-leg silhouette. Easy to style with casual shirts, T-shirts and sneakers.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Straight Fit</p><p><strong>Product Details:</strong></p><p> Classic light-wash jeans with a straight-leg silhouette. Easy to style with casual shirts, T-shirts and sneakers.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Straight Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic light-wash jeans with a straight-leg silhouette. Easy to style with casual shirts, T-shirts and sneakers.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Straight Fit</p><p><strong>Product Details:</strong></p><p> Classic light-wash jeans with a straight-leg silhouette. Easy to style with casual shirts, T-shirts and sneakers.</p>\"}",
+    "price": 1299,
+    "discount_price": 499,
+    "stock": 34,
+    "is_available": true,
+    "created_at": "2026-10-04T06:00:06.300Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 26,
+  "fields": {
+    "category": 17,
+    "brand_name": 7,
+    "name": "ightweight Bomber",
+    "title_name": "ightweight Bomber Jacket",
+    "slug": "ightweight-bomber",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Lightweight bomber jacket designed for everyday casual wear. Features a zip closure, ribbed cuffs and a comfortable regular fit.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Lightweight bomber jacket designed for everyday casual wear. Features a zip closure, ribbed cuffs and a comfortable regular fit.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Lightweight bomber jacket designed for everyday casual wear. Features a zip closure, ribbed cuffs and a comfortable regular fit.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Lightweight bomber jacket designed for everyday casual wear. Features a zip closure, ribbed cuffs and a comfortable regular fit.</p>\"}",
+    "price": 1999,
+    "discount_price": 1499,
+    "stock": 45,
+    "is_available": true,
+    "created_at": "2026-10-04T06:01:19.996Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 27,
+  "fields": {
+    "category": 17,
+    "brand_name": 7,
+    "name": "Hooded Winter",
+    "title_name": "Hooded Winter Jacket",
+    "slug": "hooded-winter",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Navy Blue\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Warm hooded jacket designed for cold weather. Features a front zip closure, adjustable hood and comfortable construction for winter outings.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Navy Blue</p><p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Warm hooded jacket designed for cold weather. Features a front zip closure, adjustable hood and comfortable construction for winter outings.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Navy Blue\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Warm hooded jacket designed for cold weather. Features a front zip closure, adjustable hood and comfortable construction for winter outings.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Navy Blue</p><p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Warm hooded jacket designed for cold weather. Features a front zip closure, adjustable hood and comfortable construction for winter outings.</p>\"}",
+    "price": 2499,
+    "discount_price": 1999,
+    "stock": 33,
+    "is_available": true,
+    "created_at": "2026-10-04T06:02:28.265Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 28,
+  "fields": {
+    "category": 17,
+    "brand_name": 7,
+    "name": "Casual Denim",
+    "title_name": "Casual Denim Jacket",
+    "slug": "casual-denim",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic denim jacket with a timeless casual design. Can be layered over T-shirts, shirts and sweatshirts for a stylish everyday look.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Classic denim jacket with a timeless casual design. Can be layered over T-shirts, shirts and sweatshirts for a stylish everyday look.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Denim\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Classic denim jacket with a timeless casual design. Can be layered over T-shirts, shirts and sweatshirts for a stylish everyday look.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Denim</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Classic denim jacket with a timeless casual design. Can be layered over T-shirts, shirts and sweatshirts for a stylish everyday look.</p>\"}",
+    "price": 1799,
+    "discount_price": 1349,
+    "stock": 23,
+    "is_available": true,
+    "created_at": "2026-10-04T06:03:17.914Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 29,
+  "fields": {
+    "category": 17,
+    "brand_name": 7,
+    "name": "Puffer",
+    "title_name": "Puffer Jacket",
+    "slug": "puffer",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Warm padded puffer jacket designed for winter conditions. Lightweight construction provides insulation while maintaining comfortable movement.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Warm padded puffer jacket designed for winter conditions. Lightweight construction provides insulation while maintaining comfortable movement.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Warm padded puffer jacket designed for winter conditions. Lightweight construction provides insulation while maintaining comfortable movement.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Warm padded puffer jacket designed for winter conditions. Lightweight construction provides insulation while maintaining comfortable movement.</p>\"}",
+    "price": 2999,
+    "discount_price": 999,
+    "stock": 19,
+    "is_available": true,
+    "created_at": "2026-10-04T06:04:42.204Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 30,
+  "fields": {
+    "category": 17,
+    "brand_name": 7,
+    "name": "Regular Fit Casual",
+    "title_name": "Regular Fit Casual Jacket",
+    "slug": "regular-fit-casual",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Brown\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Versatile casual jacket designed for cool-weather outings. Features a clean modern design that pairs easily with jeans and casual trousers.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Brown</p><p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Versatile casual jacket designed for cool-weather outings. Features a clean modern design that pairs easily with jeans and casual trousers.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Brown\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Polyester\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Fit:\\\"},{\\\"insert\\\":\\\" Regular Fit\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Versatile casual jacket designed for cool-weather outings. Features a clean modern design that pairs easily with jeans and casual trousers.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Brown</p><p><strong>Material:</strong> Polyester</p><p><strong>Fit:</strong> Regular Fit</p><p><strong>Product Details:</strong></p><p> Versatile casual jacket designed for cool-weather outings. Features a clean modern design that pairs easily with jeans and casual trousers.</p>\"}",
+    "price": 2199,
+    "discount_price": 1649,
+    "stock": 3,
+    "is_available": true,
+    "created_at": "2026-10-04T06:05:42.155Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 31,
+  "fields": {
+    "category": 18,
+    "brand_name": 5,
+    "name": "Embroidered Bridal",
+    "title_name": "Embroidered Bridal Lehenga",
+    "slug": "embroidered-bridal",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Silk Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Embroidery\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Elegant bridal lehenga featuring detailed embroidery and traditional decorative work. Designed for weddings, receptions and grand festive celebrations.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Silk Blend</p><p><strong>Work:</strong> Embroidery</p><p><strong>Product Details:</strong></p><p> Elegant bridal lehenga featuring detailed embroidery and traditional decorative work. Designed for weddings, receptions and grand festive celebrations.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Silk Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Embroidery\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Elegant bridal lehenga featuring detailed embroidery and traditional decorative work. Designed for weddings, receptions and grand festive celebrations.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Silk Blend</p><p><strong>Work:</strong> Embroidery</p><p><strong>Product Details:</strong></p><p> Elegant bridal lehenga featuring detailed embroidery and traditional decorative work. Designed for weddings, receptions and grand festive celebrations.</p>\"}",
+    "price": 6999,
+    "discount_price": 4999,
+    "stock": 22,
+    "is_available": true,
+    "created_at": "2026-10-04T06:07:13.305Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 32,
+  "fields": {
+    "category": 18,
+    "brand_name": 5,
+    "name": "Designer Party Wear",
+    "title_name": "Designer Party Wear Lehenga",
+    "slug": "designer-party-wear",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Wine\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Embroidery\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Designer party-wear lehenga featuring elegant embroidery and a stylish flowing silhouette. Suitable for receptions, parties and festive occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Wine</p><p><strong>Material:</strong> Georgette</p><p><strong>Work:</strong> Embroidery</p><p><strong>Product Details:</strong></p><p> Designer party-wear lehenga featuring elegant embroidery and a stylish flowing silhouette. Suitable for receptions, parties and festive occasions.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Wine\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Embroidery\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Designer party-wear lehenga featuring elegant embroidery and a stylish flowing silhouette. Suitable for receptions, parties and festive occasions.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Wine</p><p><strong>Material:</strong> Georgette</p><p><strong>Work:</strong> Embroidery</p><p><strong>Product Details:</strong></p><p> Designer party-wear lehenga featuring elegant embroidery and a stylish flowing silhouette. Suitable for receptions, parties and festive occasions.</p>\"}",
+    "price": 4999,
+    "discount_price": 3999,
+    "stock": 12,
+    "is_available": true,
+    "created_at": "2026-10-04T06:08:41.002Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 33,
+  "fields": {
+    "category": 18,
+    "brand_name": 5,
+    "name": "Floral Printed",
+    "title_name": "Floral Printed Lehenga",
+    "slug": "floral-printed",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Peach\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Floral Print\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Beautiful floral printed lehenga with a lightweight and comfortable design. Perfect for daytime celebrations, family functions and festive events.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Peach</p><p><strong>Material:</strong> Georgette</p><p><strong>Work:</strong> Floral Print</p><p><strong>Product Details:</strong></p><p> Beautiful floral printed lehenga with a lightweight and comfortable design. Perfect for daytime celebrations, family functions and festive events.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Color:\\\"},{\\\"insert\\\":\\\" Peach\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Georgette\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Floral Print\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Beautiful floral printed lehenga with a lightweight and comfortable design. Perfect for daytime celebrations, family functions and festive events.\\\\n\\\"}]}\",\"html\":\"<p><strong>Color:</strong> Peach</p><p><strong>Material:</strong> Georgette</p><p><strong>Work:</strong> Floral Print</p><p><strong>Product Details:</strong></p><p> Beautiful floral printed lehenga with a lightweight and comfortable design. Perfect for daytime celebrations, family functions and festive events.</p>\"}",
+    "price": 3499,
+    "discount_price": 2699,
+    "stock": 27,
+    "is_available": true,
+    "created_at": "2026-10-04T06:09:36.799Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 34,
+  "fields": {
+    "category": 18,
+    "brand_name": 5,
+    "name": "Sequin Work Festive",
+    "title_name": "Sequin Work Festive Lehenga",
+    "slug": "sequin-work-festive",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Net\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Sequin\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Festive lehenga featuring attractive sequin work that adds a stylish shimmer. Designed for weddings, parties and evening celebrations.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Net</p><p> <strong>Work:</strong> Sequin</p><p> <strong>Product Details:</strong></p><p> Festive lehenga featuring attractive sequin work that adds a stylish shimmer. Designed for weddings, parties and evening celebrations.</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Net\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Sequin\\\\n \\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Festive lehenga featuring attractive sequin work that adds a stylish shimmer. Designed for weddings, parties and evening celebrations.\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Net</p><p> <strong>Work:</strong> Sequin</p><p> <strong>Product Details:</strong></p><p> Festive lehenga featuring attractive sequin work that adds a stylish shimmer. Designed for weddings, parties and evening celebrations.</p>\"}",
+    "price": 5999,
+    "discount_price": 4999,
+    "stock": 23,
+    "is_available": true,
+    "created_at": "2026-10-04T06:10:44.451Z"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": 35,
+  "fields": {
+    "category": 18,
+    "brand_name": 5,
+    "name": "Traditional Silk Lehenga",
+    "title_name": "Traditional Silk Lehenga",
+    "slug": "traditional-silk-lehenga",
+    "General": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Silk Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Zari\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Traditional silk-blend lehenga featuring elegant zari detailing. Combines a classic ethnic appearance with a comfortable modern design for festive occasions\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Silk Blend</p><p><strong>Work:</strong> Zari</p><p><strong>Product Details:</strong></p><p> Traditional silk-blend lehenga featuring elegant zari detailing. Combines a classic ethnic appearance with a comfortable modern design for festive occasions</p>\"}",
+    "Product_details": "{\"delta\":\"{\\\"ops\\\":[{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Material:\\\"},{\\\"insert\\\":\\\" Silk Blend\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Work:\\\"},{\\\"insert\\\":\\\" Zari\\\\n\\\"},{\\\"attributes\\\":{\\\"bold\\\":true},\\\"insert\\\":\\\"Product Details:\\\"},{\\\"insert\\\":\\\"\\\\n Traditional silk-blend lehenga featuring elegant zari detailing. Combines a classic ethnic appearance with a comfortable modern design for festive occasions\\\\t\\\\t\\\\n\\\"}]}\",\"html\":\"<p><strong>Material:</strong> Silk Blend</p><p><strong>Work:</strong> Zari</p><p><strong>Product Details:</strong></p><p> Traditional silk-blend lehenga featuring elegant zari detailing. Combines a classic ethnic appearance with a comfortable modern design for festive occasions\\t\\t</p>\"}",
+    "price": 4399,
+    "discount_price": 999,
+    "stock": 8,
+    "is_available": true,
+    "created_at": "2026-10-04T06:11:38.859Z"
+  }
+},
+{
+  "model": "Products.productimage",
+  "pk": 9,
+  "fields": {
+    "image": "products/classic-tshirt-front_unaRY0B.png",
+    "product": 7
+  }
+},
+{
+  "model": "Products.productimage",
+  "pk": 10,
+  "fields": {
+    "image": "products/classic-tshirt-right_1WOBuef.png",
+    "product": 7
+  }
+},
+{
+  "model": "Products.productimage",
+  "pk": 11,
+  "fields": {
+    "image": "products/class-tshirt-right_QZgJGba.png",
+    "product": 7
+  }
+},
+{
+  "model": "Products.productimage",
+  "pk": 12,
+  "fields": {
+    "image": "products/class-tshirt-back_Bb5kElR.png",
+    "product": 7
+  }
+},
+{
+  "model": "Products.productvariant",
+  "pk": 3,
+  "fields": {
+    "color": "Black",
+    "product": 7,
+    "color_code": "#000000",
+    "stock": 25
+  }
+},
+{
+  "model": "Products.productvariant",
+  "pk": 4,
+  "fields": {
+    "color": "White",
+    "product": 7,
+    "color_code": "#FFFFFF",
+    "stock": 25
+  }
+},
+{
+  "model": "Accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$jgeSpbbKrDKBhRziMWGzDO$lz6nwOnljwyr4jclJSVgH7QDJxVY0e1uzGuBbepBGIA=",
+    "last_login": "2026-11-17T07:36:27.282Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-18T06:47:54Z",
+    "email": "midshop123@gmail.com",
+    "display_name": null,
+    "is_verified": null,
+    "register_otp": null,
+    "login_otp": null,
+    "last_login_time": null,
+    "email_verification_token": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$gJeax6wVgQxBBAnK7dLK5P$fT4jLoazZumr1dIMZGERvMDWZ9/OraXyPOJneATt6vU=",
+    "last_login": "2026-11-05T07:33:09.055Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T14:40:22.232Z",
+    "email": "negineelam6002@gmail.com",
+    "display_name": "Neelam",
+    "is_verified": true,
+    "register_otp": "7949",
+    "login_otp": null,
+    "last_login_time": "2026-11-05T07:33:09.040Z",
+    "email_verification_token": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$B81PCd2RVxcL84yK8IPqz9$CzbNbrCoCCE6As9zTUoWX2Lhh3FIemOWjSQTFrtrzWA=",
+    "last_login": "2026-10-19T09:41:58.994Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-19T09:41:39.228Z",
+    "email": "indiansoldier607@gmail.com",
+    "display_name": "uknegi",
+    "is_verified": true,
+    "register_otp": "8683",
+    "login_otp": null,
+    "last_login_time": null,
+    "email_verification_token": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Accounts.address",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "indiansoldier607@gmail.com"
+    ],
+    "full_name": "sourav singh negi",
+    "phone": "9343483444",
+    "address_line": "ksdfsjflsdd",
+    "city": "JFJSDFKLSDJF",
+    "state": "JDFSDFLKJ",
+    "pincode": "201003",
+    "country": "India",
+    "address_type": "home",
+    "is_default": true,
+    "created_at": "2026-10-19T18:40:02.970Z",
+    "updated_at": "2026-10-19T18:40:02.970Z"
+  }
+},
+{
+  "model": "Accounts.address",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "indiansoldier607@gmail.com"
+    ],
+    "full_name": "abhishek kumar",
+    "phone": "8934567894",
+    "address_line": "fjklsdjkfsdkjlf",
+    "city": "dfsdjfsdlk",
+    "state": "lkflksdk",
+    "pincode": "201003",
+    "country": "India",
+    "address_type": "home",
+    "is_default": false,
+    "created_at": "2026-10-19T18:44:15.783Z",
+    "updated_at": "2026-10-19T18:44:15.783Z"
+  }
+},
+{
+  "model": "Accounts.address",
+  "pk": 11,
+  "fields": {
+    "user": [
+      "negineelam6002@gmail.com"
+    ],
+    "full_name": "neelam",
+    "phone": "8510898090",
+    "address_line": "E-725,b nandgram",
+    "city": "Ghaziabad",
+    "state": "Uttar Pardesh",
+    "pincode": "201003",
+    "country": "India",
+    "address_type": "home",
+    "is_default": true,
+    "created_at": "2026-11-03T14:06:31.161Z",
+    "updated_at": "2026-11-03T14:06:31.161Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-09-18T07:00:26.706Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Kurti",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-09-18T07:00:37.547Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Saree",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-09-18T07:00:48.767Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Lehenga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-09-18T07:01:44.838Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Men's T-shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-09-18T07:04:17.524Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Men's Jacket",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-09-18T07:04:46.158Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "6",
+    "object_repr": "Men's Jeans",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-09-18T07:12:00.427Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Shorts",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-09-18T09:21:14.950Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Kurti",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-09-18T09:23:51.908Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Saree",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-09-18T09:24:47.349Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Lehenga",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-09-18T09:27:55.377Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Men's Jacket",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-09-18T09:30:53.778Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "6",
+    "object_repr": "Men's Jeans",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-09-18T09:32:34.730Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Shorts",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-09-18T09:41:43.400Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-09-18T09:42:45.720Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Oversized Graphic Print T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-09-18T09:43:30.754Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Men's Polo Collar T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-09-18T09:44:39.604Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "Striped Casual T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-09-18T09:45:51.677Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Premium T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-09-18T10:06:43.319Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"General\", \"Product details\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"ProductVariant object (1)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-09-19T10:05:55.941Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product details\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-09-19T10:06:57.400Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"General\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-09-19T10:07:39.146Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"General\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-09-21T10:50:49.965Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product variant\", \"object\": \"ProductVariant object (1)\", \"fields\": [\"Color code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-09-21T10:50:55.172Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-09-24T04:40:44.422Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Cart",
+      "cart"
+    ],
+    "object_id": "1",
+    "object_repr": "User - midshop123@gmail.com - Classic Solid Cotton T-Shirt",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-09-25T14:52:07.231Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Cart",
+      "cart"
+    ],
+    "object_id": "2",
+    "object_repr": "sourav - indiansoldier607@gmail.com - Classic Solid Cotton T-Shirt",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-09-25T15:10:27.424Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Cart",
+      "cart"
+    ],
+    "object_id": "3",
+    "object_repr": "sourav - indiansoldier607@gmail.com - Classic Solid Cotton T-Shirt",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-09-29T14:23:29.020Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "sourav - midshop123@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-09-29T14:23:50.913Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "User - midshop123@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-10-02T05:43:46.381Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "8",
+    "object_repr": "Men",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-10-02T05:53:27.984Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "8",
+    "object_repr": "Men",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-10-02T05:53:28.000Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "6",
+    "object_repr": "Men's Jeans",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-10-02T05:53:28.001Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Men's Jacket",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-10-02T05:53:28.001Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Men's T-shirt",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-10-02T05:53:28.001Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Lehenga",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-10-02T05:53:28.001Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Saree",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-10-02T05:53:28.001Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Kurti",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-10-02T05:53:52.820Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "9",
+    "object_repr": "Men",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-10-02T05:56:10.153Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "10",
+    "object_repr": "Men",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-10-02T05:56:20.136Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "10",
+    "object_repr": "Men",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-10-02T05:56:20.136Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "9",
+    "object_repr": "Men",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-10-02T05:59:09.123Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "11",
+    "object_repr": "Men",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-10-02T05:59:45.259Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "1",
+    "object_repr": "Urban Style",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-10-02T06:04:24.459Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Black\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-10-02T06:19:55.255Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-10-02T06:20:06.043Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "11",
+    "object_repr": "Men",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-10-02T06:20:18.356Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "1",
+    "object_repr": "Urban Style",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-10-02T10:25:18.745Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "12",
+    "object_repr": "Men",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-10-03T07:20:10.140Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "13",
+    "object_repr": "Men",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-10-03T07:26:28.868Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "13",
+    "object_repr": "Men",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-10-03T07:26:28.886Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "12",
+    "object_repr": "Men",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-10-03T07:39:58.076Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "2",
+    "object_repr": "Urban Style",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-10-03T14:05:09.219Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"General\", \"Product details\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\", \"fields\": [\"Image\"]}}, {\"deleted\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"deleted\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"deleted\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}, {\"deleted\": {\"name\": \"product image\", \"object\": \"Classic Solid Cotton T-Shirt\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-10-03T14:06:11.370Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"General\", \"Product details\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-10-03T14:08:21.064Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "14",
+    "object_repr": "Men",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-10-03T14:14:18.131Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "15",
+    "object_repr": "Saree",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-10-03T14:14:41.802Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "16",
+    "object_repr": "Men's Jeans",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-10-03T14:14:54.971Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "16",
+    "object_repr": "Men's Jeans",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-10-03T14:16:10.545Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "17",
+    "object_repr": "Men's J",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-10-03T14:16:32.591Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "17",
+    "object_repr": "Men's Jacket",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-10-03T14:16:43.888Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "18",
+    "object_repr": "Le",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-10-03T14:16:59.056Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "18",
+    "object_repr": "Lehenga",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-10-03T14:17:22.946Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "category"
+    ],
+    "object_id": "19",
+    "object_repr": "Kurti",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-10-03T14:24:14.598Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "4",
+    "object_repr": "Sangria",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-10-03T14:24:33.329Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "5",
+    "object_repr": "Libas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-10-03T14:24:58.020Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "6",
+    "object_repr": "Levi's",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-10-03T14:25:06.756Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "7",
+    "object_repr": "Wildcraft",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-10-03T14:25:16.327Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "brand"
+    ],
+    "object_id": "8",
+    "object_repr": "Manyavar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-10-04T05:43:40.906Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "Traditional Banarasi Silk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-10-04T05:44:57.514Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Floral Printed Georgette",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-10-04T05:46:08.320Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "14",
+    "object_repr": "Embroidered Designer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-10-04T05:47:01.192Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Cotton Handloom",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-10-04T05:48:02.409Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "Party Wear Organza",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-10-04T05:50:17.277Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "Floral Printed Cotton",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-10-04T05:53:05.690Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Straight Fit Rayon",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-10-04T05:54:02.810Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "19",
+    "object_repr": "Embroidered Anarkali",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-10-04T05:54:54.447Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "20",
+    "object_repr": "Printed A-Line",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-10-04T05:56:03.931Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "21",
+    "object_repr": "Festive Embroidered",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-10-04T05:57:06.897Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "22",
+    "object_repr": "Slim Fit Blue",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-10-04T05:58:10.066Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "23",
+    "object_repr": "Regular Fit Dark Blue",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-10-04T05:59:13.584Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "24",
+    "object_repr": "Stretchable Black",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-10-04T06:00:06.309Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "25",
+    "object_repr": "Light Wash Straight",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-10-04T06:01:19.996Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "26",
+    "object_repr": "ightweight Bomber",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-10-04T06:02:28.267Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "27",
+    "object_repr": "Hooded Winter",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-10-04T06:03:17.914Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "28",
+    "object_repr": "Casual Denim",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-10-04T06:03:30.087Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "21",
+    "object_repr": "Festive Embroidered",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is available\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-10-04T06:04:42.204Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "29",
+    "object_repr": "Puffer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-10-04T06:05:42.171Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "30",
+    "object_repr": "Regular Fit Casual",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-10-04T06:07:13.305Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "31",
+    "object_repr": "Embroidered Bridal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-10-04T06:08:41.006Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "32",
+    "object_repr": "Designer Party Wear",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-10-04T06:09:36.799Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "33",
+    "object_repr": "Floral Printed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-10-04T06:10:44.467Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "34",
+    "object_repr": "Sequin Work Festive",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-10-04T06:11:38.859Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "35",
+    "object_repr": "Traditional Silk Lehenga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-10-04T06:17:57.694Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Products",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Classic Solid Cotton T-Shirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"General\", \"Product details\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-10-10T18:57:19.455Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "userprofile"
+    ],
+    "object_id": "1",
+    "object_repr": "UserProfile object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"address\", \"object\": \"home - Ghaziabad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-10-11T18:13:40.080Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "sourav - indiansoldier607@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"address\", \"object\": \"home - Ghaziabad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-10-12T10:44:51.600Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "sourav - indiansoldier607@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"address\", \"object\": \"work - Ghaziabad\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.475Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "43",
+    "object_repr": "ORD-FF60AC2711",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.516Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "42",
+    "object_repr": "ORD-DB8073F8B5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.516Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "41",
+    "object_repr": "ORD-46D41E12B5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.516Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "40",
+    "object_repr": "ORD-98600410AA",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.532Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "39",
+    "object_repr": "ORD-24EE9EFC86",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.532Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "38",
+    "object_repr": "ORD-CDDE5DB2A1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.532Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "37",
+    "object_repr": "ORD-25CF4EAD5F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.540Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "36",
+    "object_repr": "ORD-67EF8E4D3F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.540Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "35",
+    "object_repr": "ORD-3A75B517F2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.540Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "34",
+    "object_repr": "ORD-3B7CD85AF6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.540Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "33",
+    "object_repr": "ORD-809309CB59",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.546Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "32",
+    "object_repr": "ORD-17919E80D5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "31",
+    "object_repr": "ORD-1B8B92A3B9",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "30",
+    "object_repr": "ORD-F7F5B8E0D4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "29",
+    "object_repr": "ORD-8437C54407",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "28",
+    "object_repr": "ORD-B9D5C9406C",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "27",
+    "object_repr": "ORD-199ED9FCBA",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "26",
+    "object_repr": "ORD-CD98BD0B38",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.548Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "25",
+    "object_repr": "ORD-E392378FCD",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.562Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "24",
+    "object_repr": "ORD-99171DCEFC",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.562Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "23",
+    "object_repr": "ORD-3CBDF9F2C9",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.564Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "22",
+    "object_repr": "ORD-CE9CE7F985",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.564Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "21",
+    "object_repr": "ORD-8C212CF628",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.564Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "20",
+    "object_repr": "ORD-36C556226C",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.564Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "19",
+    "object_repr": "ORD-370D2CF22F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.564Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "18",
+    "object_repr": "ORD-A77425CEA8",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.564Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "17",
+    "object_repr": "ORD-D588ABDD2F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.577Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "16",
+    "object_repr": "ORD-F0057F5846",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.577Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "15",
+    "object_repr": "ORD-DE6882A9B9",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.581Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "14",
+    "object_repr": "ORD-35F5646605",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.583Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "13",
+    "object_repr": "ORD-7E091665B3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.583Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "12",
+    "object_repr": "ORD-5B45416711",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.583Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "11",
+    "object_repr": "ORD-AE5A65ECB3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.583Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "10",
+    "object_repr": "ORD-B34D5B1592",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.583Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "9",
+    "object_repr": "ORD-ECBF6048C6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.583Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "8",
+    "object_repr": "ORD-FD76AA6068",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.593Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "7",
+    "object_repr": "ORD-99B7848380",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.593Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "6",
+    "object_repr": "ORD-9E16E10E62",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.598Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "5",
+    "object_repr": "ORD-008B62D299",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.598Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "4",
+    "object_repr": "ORD-1E26AEE7F6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-10-12T17:22:09.598Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "1",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-10-19T09:34:59.185Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "sourav - indiansoldier607@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-10-19T09:39:45.096Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Accounts",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "uknegi - indiansoldier607@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-11-03T18:12:47.169Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "orderitem"
+    ],
+    "object_id": "66",
+    "object_repr": "Regular Fit Casual Shirt × 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2026-11-03T18:12:47.210Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "orderitem"
+    ],
+    "object_id": "65",
+    "object_repr": "Classic Solid Cotton T-Shirt × 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2026-11-03T18:12:47.210Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "orderitem"
+    ],
+    "object_id": "64",
+    "object_repr": "Party Wear Organza × 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2026-11-03T18:12:47.215Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "orderitem"
+    ],
+    "object_id": "63",
+    "object_repr": "Classic Solid Cotton T-Shirt × 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2026-11-03T18:30:16.162Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "orderitem"
+    ],
+    "object_id": "68",
+    "object_repr": "Regular Fit Casual Shirt × 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2026-11-03T18:30:16.190Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "orderitem"
+    ],
+    "object_id": "67",
+    "object_repr": "Classic Solid Cotton T-Shirt × 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.211Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "77",
+    "object_repr": "ORD-443A4A5CB7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.260Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "76",
+    "object_repr": "ORD-F3C2DD59CF",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.260Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "75",
+    "object_repr": "ORD-24CFEC8CBC",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.260Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "74",
+    "object_repr": "ORD-AC0E8D1665",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.265Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "73",
+    "object_repr": "ORD-05A8E4007F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "72",
+    "object_repr": "ORD-514842EEB0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "71",
+    "object_repr": "ORD-BD0F20F2CB",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "70",
+    "object_repr": "ORD-91F811F3EE",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "69",
+    "object_repr": "ORD-B92301DE8F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "68",
+    "object_repr": "ORD-4B5A41302D",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "67",
+    "object_repr": "ORD-C45972D0C7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2026-11-09T11:36:50.266Z",
+    "user": [
+      "midshop123@gmail.com"
+    ],
+    "content_type": [
+      "Order",
+      "order"
+    ],
+    "object_id": "66",
+    "object_repr": "ORD-68BC671CDA",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]
