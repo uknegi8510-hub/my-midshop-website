@@ -101,13 +101,13 @@ WSGI_APPLICATION = 'e_commerce.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.config(
-            default=DATABASE_URL,
-            conn_max_age=600,
+            default=DATABASE_URL
         )
     }
 else:

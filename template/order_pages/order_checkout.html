@@ -703,8 +703,8 @@
                         {{ order_items|length }} item{{ order_items|length|pluralize }}
                     </span>
                 </div>
-
                 {% for item in order_items %}
+                {% if item > 0 %}
                     <article class="product-item">
 
                         <div class="product-image">
@@ -745,10 +745,12 @@
 
                     </article>
                 {% empty %}
-                    <p class="product-description">
+                {% else %}
+                    <!-- <p class="product-description"> -->
                         No items found for this order.
                     </p>
-                {% endfor %}
+                    {% endif %}
+                    {% endfor %}
             </section>
 
             <!-- Payment information -->
